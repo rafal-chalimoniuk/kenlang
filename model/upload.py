@@ -1,4 +1,4 @@
-"""Upload the assembled model folder (default ``<repo>/../project_hf``) to the Hugging Face Hub.
+"""Upload the assembled model folder (default ``<repo>/../project_hf/<model name>``) to the Hugging Face Hub.
 
     python -m model.upload --repo-id <user>/kenlang-gemma-4-12b-it-lora-v2        # dry run: lists the files
     python -m model.upload --repo-id <user>/kenlang-gemma-4-12b-it-lora-v2 --yes  # create the repo, upload
@@ -12,18 +12,18 @@ import pathlib
 import sys
 
 HERE = pathlib.Path(__file__).resolve().parent
-DEFAULT_FOLDER = HERE.parent.parent / "project_hf"
+DEFAULT_ROOT = HERE.parent.parent / "project_hf"
 
 
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--repo-id", required=True)
-    ap.add_argument("--folder", default=str(DEFAULT_FOLDER), help="default: %(default)s")
+    ap.add_argument("--folder", default="", help="default: <DEFAULT_ROOT>/<model name>, as built by assemble")
     ap.add_argument("--public", action="store_true")
     ap.add_argument("--yes", action="store_true", help="really upload (default is a dry run)")
     a = ap.parse_args()
 
-    folder = pathlib.Path(a.folder)
+    folder = pathlib.Path(a.folder) if a.folder else DEFAULT_ROOT / a.repo_id.split("/")[-1]
     if not (folder / "README.md").exists():
         sys.exit(f"{folder} has no README.md; run `python -m model.assemble` first")
     if "<your-username>" in a.repo_id or "<your-username>" in (folder / "README.md").read_text(encoding="utf-8"):

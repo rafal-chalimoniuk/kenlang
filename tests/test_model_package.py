@@ -191,6 +191,25 @@ def test_default_output_is_outside_the_repository():
     repo = assemble.ROOT
     assert assemble.DEFAULT_OUT == repo.parent / "project_hf"
     assert repo not in assemble.DEFAULT_OUT.parents
+    assert upload.DEFAULT_ROOT == assemble.DEFAULT_OUT
+
+
+def test_each_model_gets_its_own_folder_named_like_its_repository(monkeypatch, results, tmp_path, capsys):
+    """Without --out the package goes to <container>/<model name>, and upload finds it there without --folder."""
+    container = tmp_path / "container"
+    monkeypatch.setattr(assemble, "DEFAULT_OUT", container)
+    monkeypatch.setattr(upload, "DEFAULT_ROOT", container)
+    optional = ["--qwen-results", str(results / "none"), "--length-json", str(results / "no.json")]
+    for name in ("model-v7", "model-v8"):
+        monkeypatch.setattr(sys, "argv", ["assemble", "--results", str(results), "--repo-id", f"someone/{name}",
+                                          *optional])
+        assemble.main()
+    # two versions side by side: the second did not overwrite the first
+    assert (container / "model-v7" / "README.md").exists() and (container / "model-v8" / "README.md").exists()
+    assert not (container / "README.md").exists()          # nothing is put directly into the container
+    monkeypatch.setattr(sys, "argv", ["upload", "--repo-id", "someone/model-v7"])
+    upload.main()                                          # a dry run: it must find the folder on its own
+    assert "Would upload" in capsys.readouterr().out
 
 
 def test_card_without_a_source_link(monkeypatch, results, tmp_path):

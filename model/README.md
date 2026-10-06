@@ -1,13 +1,14 @@
 # Publishing the model
 
-The project has **two repositories**, and they are deliberately separate folders:
+The project has **two repositories**, kept apart on purpose:
 
-| | What it holds | Where it lives |
+| | What it holds | Hosted on |
 |---|---|---|
-| **GitHub** – this repository | the language, docs, tests, benchmark, training code and the scripts in this folder; **no weights** | `kenlang/` |
-| **Hugging Face** – the model | the LoRA adapter, tokenizer, model card, the exact language reference, training log, evaluation results | `project_hf/` next to this repository |
+| **This repository** | the language, docs, tests, benchmark, training code and the scripts in this folder; **no weights** | GitHub |
+| **The model** | the LoRA adapter, tokenizer, model card, the exact language reference, training log, evaluation results | the Hugging Face Hub |
 
-`model/` contains the tooling that builds the second from the first. It never writes into this repository.
+`model/` contains the tooling that builds the second from the first. It never writes into this repository: the model
+folder is built somewhere else on your disk.
 
 ```
 python -m model.assemble --repo-id <user>/kenlang-gemma-4-12b-it-lora-v2 --repo-url https://github.com/<user>/kenlang
@@ -15,7 +16,10 @@ python -m model.upload   --repo-id <user>/kenlang-gemma-4-12b-it-lora-v2        
 python -m model.upload   --repo-id <user>/kenlang-gemma-4-12b-it-lora-v2 --yes      # creates a PRIVATE repo and uploads
 ```
 
-Both commands default to the folder `<this repository>/../project_hf`; pass `--out` / `--folder` to change it.
+You choose where the model folder goes with `--out` (`assemble`) and `--folder` (`upload`). Without them, `assemble`
+creates `<this repository>/../project_hf/<model name>`, making any missing folder on the way, and `upload` looks
+there. The model name is the last part of `--repo-id`, so every model version gets its own folder, named like its
+repository on the Hub.
 
 | File | Purpose |
 |---|---|

@@ -3,8 +3,9 @@
     python -m model.assemble --repo-id <user>/kenlang-gemma-4-12b-it-lora-v2 --repo-url https://github.com/<user>/kenlang
 
 Reads the adapter, training log/config and the evaluation results from ``training/out`` and writes a
-ready-to-upload folder next to the repository, by default ``<repo>/../project_hf`` (the Hugging Face repository
-lives outside the GitHub repository on purpose: the weights do not belong in git).
+ready-to-upload folder outside the repository: by default ``<repo>/../project_hf/<model name>``, where the model
+name is the last part of ``--repo-id`` (the weights do not belong in git, and every model version gets its own
+folder, named like its repository on the Hub).
 Every number on the model card is computed from the result files; nothing is typed in by hand.
 Nothing is uploaded: see ``model/upload.py``.
 """
@@ -148,7 +149,7 @@ def main():
     ap.add_argument("--repo-url", default="", help="source repository URL; leave empty to omit the link")
     ap.add_argument("--results", default=str(OUT), help="folder with the adapter, logs and evaluation results")
     ap.add_argument("--adapter", default="", help="adapter folder (default: <results>/adapter)")
-    ap.add_argument("--out", default=str(DEFAULT_OUT), help="folder to create (default: %(default)s)")
+    ap.add_argument("--out", default="", help="folder to create (default: <DEFAULT_OUT>/<model name>)")
     ap.add_argument("--length-json", default=str(LENGTH_JSON),
                     help="numbers written by `python -m benchmarks.length --json`; the section is left out if absent")
     ap.add_argument("--qwen-results", default=str(QWEN_RESULTS),
@@ -156,7 +157,8 @@ def main():
     a = ap.parse_args()
 
     results = pathlib.Path(a.results)
-    adapter, dist = pathlib.Path(a.adapter or results / "adapter"), pathlib.Path(a.out)
+    adapter = pathlib.Path(a.adapter or results / "adapter")
+    dist = pathlib.Path(a.out) if a.out else DEFAULT_OUT / a.repo_id.split("/")[-1]
     check_adapter(adapter)
     base, ft = load_rows(results, "base"), load_rows(results, "finetuned")
     cfg = json.loads((results / "train_config.json").read_text(encoding="utf-8"))
