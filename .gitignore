@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.venv/
+.pytest_cache/
+.ruff_cache/
+
+# Training and evaluation artefacts (large, reproducible)
+training/out*/
+training/data/*.tmp
+benchmarks/results/*.log
+unsloth_compiled_cache/
+*.safetensors
+*.gguf
+*.log
+
+# Local
+.vscode/
+.idea/
+.DS_Store
+

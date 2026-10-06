@@ -1,0 +1,5 @@
+# Numbers 1..30, keep the multiples of 7, then summarise them.
+upto 30 filter [ mod 7 eq 0 ] as multiples
+"Multiples of 7:" print multiples print
+"Sum:" print multiples sum print
+"Squares:" print multiples map [ pow 2 ] print

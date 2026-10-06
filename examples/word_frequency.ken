@@ -1,0 +1,2 @@
+# The three most frequent words of a text file, ignoring the article "the".
+read data/text.txt lower words drop the freq first 3 map [ fmt "{0} ({1}x)" ] print

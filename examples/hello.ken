@@ -1,0 +1,2 @@
+# The smallest Ken program: a value, then a command that acts on it.
+"Hello, Ken!" print

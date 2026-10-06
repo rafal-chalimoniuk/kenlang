@@ -1,0 +1,13 @@
+# A sales report over data/orders.csv.
+csv data/orders.csv as all count as n
+all where status eq done set rev [ qty mul price ] as ok
+"Completed orders:" print ok count print
+"Revenue:" print ok each rev sum round 2 print
+"Average order value:" print ok each rev mean round 2 print
+"Returned %:" print all where status eq returned count div n mul 100 round 1 print
+"Revenue by category:" print
+ok group category map [ each rev sum round 2 ] pairs rsort 1 map [ fmt "{0}: {1}" ] print
+"Top 3 customers:" print
+ok group customer map [ each rev sum round 2 ] pairs rsort 1 first 3 map [ fmt "{0}: {1}" ] print
+"Revenue by month:" print
+ok set month [ date slice 0 7 ] group month map [ each rev sum round 2 ] pairs sort 0 map [ fmt "{0}: {1}" ] print

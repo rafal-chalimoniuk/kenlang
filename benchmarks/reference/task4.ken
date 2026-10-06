@@ -1,0 +1,1 @@
+csv orders.csv where status eq returned by customer [ each qty sum ] pairs filter [ get 1 ge 5 ] sort 0 map [ fmt "{0}: {1}" ] print

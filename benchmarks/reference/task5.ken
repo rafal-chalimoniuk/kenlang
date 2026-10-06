@@ -1,0 +1,2 @@
+def tier [ if [ ge 1000 ] [ "large" ] [ if [ ge 200 ] [ "medium" ] [ "small" ] ] ]
+csv orders.csv where status eq done set rev [ qty mul price ] each rev map [ tier ] freq map [ fmt "{0}: {1}" ] print

@@ -1,0 +1,2 @@
+csv orders.csv where status eq done set rev [ qty mul price ] set month [ date slice 0 7 ]
+by month [ each rev sum round 2 ] pairs sort 0 map [ fmt "{0}: {1}" ] print

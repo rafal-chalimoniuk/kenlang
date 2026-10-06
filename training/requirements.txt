@@ -1,0 +1,18 @@
+# Environment in which the released adapter was trained and evaluated (Windows 11, Python 3.12,
+# NVIDIA RTX 5090 Laptop GPU with 24 GB, CUDA 12.8 wheels). See training/README.md for the
+# two-step install: unsloth pins transformers<=5.5.0, but Gemma 4 12B needs a newer one.
+--extra-index-url https://download.pytorch.org/whl/cu128
+torch==2.11.0
+torchvision==0.26.0
+unsloth==2026.9.14
+unsloth_zoo==2026.9.9
+trl==0.24.0
+peft==0.21.2
+bitsandbytes==0.50.2
+accelerate==1.15.0
+datasets==3.6.0
+xformers==0.0.35
+pandas>=2.0
+numpy
+# installed second, overriding unsloth's pin:
+# transformers==5.17.0

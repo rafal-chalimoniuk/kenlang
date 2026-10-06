@@ -1,0 +1,12 @@
+# Any Python library can be used: `use`, then `alias.function`. Needs numpy, scipy and matplotlib.
+use numpy as np
+use statistics
+use scipy.stats as st
+csv data/orders.csv as all where status eq done set rev [ qty mul price ] as ok
+"Standard deviation (numpy):" print ok each rev np.std round 2 print
+"90th percentile (numpy):" print ok each rev np.percentile:1 90 round 2 print
+"Median (statistics):" print ok each rev statistics.median print
+"Skewness (scipy):" print ok each rev st.skew round 3 print
+"Orders by status (pandas):" print all .pivot_table values=qty index=category columns=status aggfunc=count fill_value=0 print
+ok .groupby:1 category .rev .sum .sort_values .plot.barh title=Revenue .get_figure .savefig:1 chart.png bbox_inches=tight
+"Saved chart.png" print

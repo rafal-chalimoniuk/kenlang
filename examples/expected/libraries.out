@@ -1,0 +1,16 @@
+Standard deviation (numpy):
+3243.17
+90th percentile (numpy):
+3499
+Median (statistics):
+249.99
+Skewness (scipy):
+2.848
+Orders by status (pandas):
+status       cancelled  done  returned
+category                              
+books                2    49         9
+clothing             8   105         9
+electronics          7   122         9
+groceries            2    75         3
+Saved chart.png

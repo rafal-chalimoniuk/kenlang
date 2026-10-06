@@ -1,0 +1,3 @@
+# Define a new word with `def`, then use it like a built-in command.
+def verdict [ if [ ge 50 ] [ "pass" ] [ "retake" ] ]
+list 72,38,50,91 map [ verdict ] print

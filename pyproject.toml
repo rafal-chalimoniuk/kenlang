@@ -1,0 +1,70 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "kenlang"
+dynamic = ["version"]
+description = "Ken: an experimental programming language that compiles to Python, designed to be written by small language models."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "Rafał Chalimoniuk" }]
+keywords = ["programming-language", "dsl", "pipeline", "pandas", "llm", "compiler"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Software Development :: Compilers",
+]
+dependencies = ["pandas>=2.0"]
+
+[project.optional-dependencies]
+examples = ["numpy", "scipy", "matplotlib"]
+dev = ["pytest>=8", "ruff>=0.6", "numpy", "scipy", "matplotlib"]
+
+[project.urls]
+Homepage = "https://github.com/rafal-chalimoniuk/kenlang"
+Repository = "https://github.com/rafal-chalimoniuk/kenlang"
+Issues = "https://github.com/rafal-chalimoniuk/kenlang/issues"
+Documentation = "https://github.com/rafal-chalimoniuk/kenlang/blob/main/docs/language-reference.md"
+Model = "https://huggingface.co/djchali/kenlang-gemma-4-12b-it-lora-v2"
+
+[project.scripts]
+kenlang = "kenlang.cli:main"
+
+[tool.hatch.version]
+path = "src/kenlang/__init__.py"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/kenlang"]
+
+[tool.hatch.build.targets.sdist]
+include = ["/src", "/tests", "/docs", "/examples", "/README.md", "/LICENSE", "/CHANGELOG.md"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"
+
+[tool.ruff]
+line-length = 120
+target-version = "py39"
+src = ["src", "."]
+extend-exclude = ["unsloth_compiled_cache", "training/out"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP"]
+ignore = [
+    "E731",  # the compiler builds small lambdas on purpose
+    "B904",
+    "UP015",
+]
+
+[tool.ruff.lint.per-file-ignores]
+"src/kenlang/runtime.py" = ["A001", "F811"]  # commands intentionally shadow builtins (sum, map, filter, ...)

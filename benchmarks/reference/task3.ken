@@ -1,0 +1,2 @@
+csv orders.csv by category [ as g g count as n g where status eq returned count div n mul 100 round 1 ]
+pairs rsort 1 map [ fmt "{0}: {1}%" ] print

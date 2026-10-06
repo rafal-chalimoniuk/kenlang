@@ -1,0 +1,4 @@
+csv orders.csv as all
+"Cancelled:" print all where status eq cancelled count print
+"Best sellers:" print
+all where status eq done by product [ each qty sum ] top 5 map [ fmt "{0}: {1}" ] print

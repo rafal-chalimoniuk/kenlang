@@ -1,0 +1,1 @@
+csv orders.csv where status eq done where category in clothing,groceries where product has e each qty sum print

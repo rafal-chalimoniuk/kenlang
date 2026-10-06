@@ -1,0 +1,16 @@
+[
+  {"id": 1, "title": "Cancelled orders, and the five best-selling products", "skills": ["by", "top", "fmt"], "seen_in_training": true,
+   "task": "Write a Ken program that:\n1. prints the text `Cancelled:` followed by the number of orders with status `cancelled`;\n2. prints the text `Best sellers:` followed by the 5 products with the largest total quantity (`qty`) sold among orders with status `done`. The order must be descending and each line must have the format `product: units`."},
+  {"id": 2, "title": "Revenue for each month", "skills": ["set", "slice", "by", "fmt"], "seen_in_training": true,
+   "task": "Write a Ken program that computes, for orders with status `done`, the revenue (`qty` × `price`) in each month. Print the months in ascending order, one per line in the format `YYYY-MM: revenue`, with the revenue rounded to 2 decimal places."},
+  {"id": 3, "title": "Share of returned orders in each category", "skills": ["as inside a block", "arithmetic"], "seen_in_training": true,
+   "task": "Write a Ken program that computes, for each category, the percentage of orders with status `returned` among all orders of that category (whatever their status), rounded to 1 decimal place. Print the categories from the highest percentage to the lowest, in the format `category: X%`."},
+  {"id": 4, "title": "Customers who returned five or more items", "skills": ["by", "filter", "get"], "seen_in_training": true,
+   "task": "Write a Ken program that sums, among orders with status `returned`, the returned items (`qty`) separately for each customer. Print alphabetically only the customers who returned at least 5 items, in the format `customer: units`."},
+  {"id": 5, "title": "Sorting orders into large, medium and small", "skills": ["def", "if", "freq"], "seen_in_training": true,
+   "task": "Write a Ken program that classifies every order with status `done` by its value `qty` × `price`: `large` if the value is at least 1000, `medium` if it is at least 200, and `small` otherwise. Print the number of orders in each class, most numerous first, in the format `class: count`."},
+  {"id": 6, "title": "Counting items from two categories whose product name contains a letter", "skills": ["where in", "where has"], "seen_in_training": true,
+   "task": "Write a Ken program that counts the total number of items (`qty`) in orders with status `done` from the category `clothing` or `groceries` whose product name contains the fragment `e`. Print just the number."},
+  {"id": 7, "title": "Saving a list of returns to a file", "skills": ["pick", "save"], "seen_in_training": true,
+   "task": "Write a Ken program that writes to the file `returns.csv` the columns `date`, `customer` and `product` (in this order) of orders with status `returned`, sorted ascending by date. The file must have a header and no index column. Then the program must print the number of those orders."}
+]
