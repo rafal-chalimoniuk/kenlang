@@ -52,6 +52,8 @@ does not depend on Ken. Both columns use the same setup: Gemma 4 12B quantised t
 Mean answer length over all three sets: {{BASE_TOKENS}} tokens for Gemma 4 12B alone, {{FT_TOKENS}} tokens with the
 adapter. A *token* is a small piece of text, roughly three-quarters of a word.
 
+{{LEFT_OUT}}
+
 The generated set is the easiest to pass, because it shares its templates with the training data. The set with the
 table the model never saw is the one that shows whether it learned Ken or only memorised one table.
 

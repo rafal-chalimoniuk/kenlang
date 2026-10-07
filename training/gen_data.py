@@ -237,38 +237,50 @@ def round_nice(x, integer=False):
 
 # ---------- output shapes shared by the grouped pieces ----------
 
+def has_ties(values, n):
+    """True if equal values among the first ``n`` of ``values`` or at the cut make the result depend on tie-breaking."""
+    return any(values[i] == values[i + 1] for i in range(min(n, len(values) - 1)))
+
+
 def choose_shape(rnd, items, gi, sep, unit, hint_val):
-    """How the (key, value) pairs are ordered and printed: returns pipe, text, expected pairs and format."""
+    """How the (key, value) pairs are ordered and printed.
+
+    Returns the pipe, the text, the expected pairs, the format and ``tied``: whether equal values make the expected
+    output depend on how ties are broken (Ken keeps the order of first appearance, pandas sorts keys), which a
+    program in another language need not reproduce."""
     shape = rnd.choice(["sorted_key", "top", "bottom", "rsort_all", "threshold", "top"])
     show = rnd.choice(["prints", "prints", "outputs", "displays"])
     fmtstr = "{0}" + sep + "{1}" + unit
     hint = f"{gi['key']}{sep}{hint_val}{unit}"
     if shape == "sorted_key":
         return ["pairs sort 0"], f"{show} the results {gi['sort']}, one per line in the format `{hint}`", \
-            sorted(items, key=lambda kv: kv[0]), fmtstr
+            sorted(items, key=lambda kv: kv[0]), fmtstr, False
     if shape == "top":
         n = rnd.randint(1, min(5, len(items) - 1))
         what = "the single entry" if n == 1 else f"the {n} entries"
         return [f"top {n}"], \
             f"{show} {what} with the largest value (descending), one per line in the format `{hint}`", \
-            sorted(items, key=lambda kv: kv[1], reverse=True)[:n], fmtstr
+            sorted(items, key=lambda kv: kv[1], reverse=True)[:n], fmtstr, \
+            has_ties(sorted((v for _, v in items), reverse=True), n)
     if shape == "bottom":
         n = rnd.randint(1, min(4, len(items) - 1))
         what = "the single entry" if n == 1 else f"the {n} entries"
         return [f"pairs sort 1 first {n}"], \
             f"{show} {what} with the smallest value (ascending), one per line in the format `{hint}`", \
-            sorted(items, key=lambda kv: kv[1])[:n], fmtstr
+            sorted(items, key=lambda kv: kv[1])[:n], fmtstr, has_ties(sorted(v for _, v in items), n)
     if shape == "rsort_all":
         return ["pairs rsort 1"], \
             f"{show} all results from the largest value to the smallest, in the format `{hint}`", \
-            sorted(items, key=lambda kv: kv[1], reverse=True), fmtstr
+            sorted(items, key=lambda kv: kv[1], reverse=True), fmtstr, \
+            has_ties(sorted((v for _, v in items), reverse=True), len(items))
     vs = sorted(v for _, v in items)
     cut = round_nice(vs[len(vs) // 2])
     out = sorted([kv for kv in items if kv[1] >= cut], key=lambda kv: kv[0])
     if not out or len(out) == len(items):
         raise Skip
     return [f"pairs filter [ get 1 ge {cut} ] sort 0"], \
-        f"{show} {gi['sort']} only the entries whose value is at least {cut}, in the format `{hint}`", out, fmtstr
+        f"{show} {gi['sort']} only the entries whose value is at least {cut}, in the format `{hint}`", out, fmtstr, \
+        False
 
 
 def grouped_items(sub, gi, value, min_groups=3):
@@ -320,12 +332,12 @@ def piece_grouped(rnd, t, start):
     word = "X" if unit else mi["val"]
     if not unit and m == "qty" and rnd.random() < 0.5:
         word = t.qty.unit.strip()
-    pipe, out_txt, out, fmtstr = choose_shape(rnd, items, gi, sep, unit, word)
+    pipe, out_txt, out, fmtstr, tied = choose_shape(rnd, items, gi, sep, unit, word)
     lab, lab_txt, lab_tok = label_part(rnd)
     parts = prefix_parts(t, start, wheres, gi, mi.get("rev"))
     parts.append(by_or_group(rnd, gi, mi["blk"]))
     parts += pipe + [f'map [ fmt "{fmtstr}" ] print']
-    return dict(clause=per_clause(rnd, gi, mi["phr"], considering(t, texts), out_txt, lab_txt),
+    return dict(tied=tied, clause=per_clause(rnd, gi, mi["phr"], considering(t, texts), out_txt, lab_txt),
                 tok=lab_tok + " ".join(parts), exp=([lab] if lab else []) + format_lines(out, sep, unit), pre=[])
 
 
@@ -391,7 +403,7 @@ def piece_share(rnd, t, start):
         return round(float(cond_mask(grp).sum()) / len(grp) * 100, 1)
     items = grouped_items(sub, gi, value)
     sep = rnd.choice([": ", ": ", " - "])
-    pipe, out_txt, out, fmtstr = choose_shape(rnd, items, gi, sep, "%", "X")
+    pipe, out_txt, out, fmtstr, tied = choose_shape(rnd, items, gi, sep, "%", "X")
     g, n = rnd.choice(["g", "grp", "rows", "part"]), rnd.choice(["n", "size", "tot"])
     block = f"as {g} {g} count as {n} {g} {cond_where} count div {n} mul 100 round 1"
     parts = prefix_parts(t, start, wheres, gi) + [f"by {gi['key']} [ {block} ]"] + pipe
@@ -399,7 +411,7 @@ def piece_share(rnd, t, start):
     each = rnd.choice(gi["each"])
     clause = (f"computes, for {each}, the percentage of {t.rows} {cond_text} among all {t.rows} of that "
               f"{gi['noun']}{considering(t, texts)}, rounded to 1 decimal place, and then {out_txt}")
-    return dict(clause=clause, tok=" ".join(parts), exp=format_lines(out, sep, "%"), pre=[])
+    return dict(tied=tied, clause=clause, tok=" ".join(parts), exp=format_lines(out, sep, "%"), pre=[])
 
 
 def piece_ratio(rnd, t, start):
@@ -416,7 +428,7 @@ def piece_ratio(rnd, t, start):
         raise Skip
     items = grouped_items(sub, gi, lambda d: round(A["fraw"](d) / B["fraw"](d), 2))
     sep = rnd.choice([": ", ": ", " - "])
-    pipe, out_txt, out, fmtstr = choose_shape(rnd, items, gi, sep, "", "ratio")
+    pipe, out_txt, out, fmtstr, tied = choose_shape(rnd, items, gi, sep, "", "ratio")
     g, x, y = rnd.choice(["g", "grp", "rows", "part"]), rnd.choice(["a", "x", "num"]), rnd.choice(["b", "y", "den"])
     block = f"as {g} {g} {A['raw']} as {x} {g} {B['raw']} as {y} {x} div {y} round 2"
     rev = A.get("rev") or B.get("rev")
@@ -425,7 +437,7 @@ def piece_ratio(rnd, t, start):
     clause = per_clause(rnd, gi, f"the ratio of {A['phr']} to {B['phr']}",
                         f"{considering(t, texts)}, rounded to 2 decimal places", out_txt, "",
                         verb=pick(rnd, "computes", "calculates"))
-    return dict(clause=clause, tok=" ".join(parts), exp=format_lines(out, sep, ""), pre=[])
+    return dict(tied=tied, clause=clause, tok=" ".join(parts), exp=format_lines(out, sep, ""), pre=[])
 
 
 def piece_total_share(rnd, t, start):
@@ -439,7 +451,7 @@ def piece_total_share(rnd, t, start):
     total = mi["fraw"](sub)
     items = grouped_items(sub, gi, lambda d: round(mi["fraw"](d) / total * 100, 1))
     sep = rnd.choice([": ", ": ", " - "])
-    pipe, out_txt, out, fmtstr = choose_shape(rnd, items, gi, sep, "%", "X")
+    pipe, out_txt, out, fmtstr, tied = choose_shape(rnd, items, gi, sep, "%", "X")
     s, tot = rnd.choice(["base", "whole", "full"]), rnd.choice(["total", "tot", "grand"])
     parts = prefix_parts(t, start, wheres, gi, mi.get("rev")) + [
         f"as {s}", f"{s} {mi['raw']} as {tot}",
@@ -448,7 +460,7 @@ def piece_total_share(rnd, t, start):
     each = rnd.choice(gi["each"])
     clause = (f"computes, for {each}, its share of {mi['phr']} {scope_text(t, texts)}, as a percentage rounded to "
               f"1 decimal place, and then {out_txt}")
-    return dict(clause=clause, tok=" ".join(parts), exp=format_lines(out, sep, "%"), pre=[])
+    return dict(tied=tied, clause=clause, tok=" ".join(parts), exp=format_lines(out, sep, "%"), pre=[])
 
 
 # --- `if` inside a block, and `def` ---
@@ -582,7 +594,7 @@ def piece_scaled(rnd, t, start):
         return round(float(getattr(d[num.name], agg)()) * factor, 2)
     items = grouped_items(sub, gi, value)
     sep = rnd.choice([": ", ": ", " - "])
-    pipe, out_txt, out, fmtstr = choose_shape(rnd, items, gi, sep, "", "value")
+    pipe, out_txt, out, fmtstr, tied = choose_shape(rnd, items, gi, sep, "", "value")
     step = f"mul {factor} round 2"
     word = rnd.choice(SCALE_NAMES)
     use_def = rnd.random() < 0.6
@@ -595,7 +607,7 @@ def piece_scaled(rnd, t, start):
         [f'map [ fmt "{fmtstr}" ] print']
     phr = f"the {aggword} {num.noun} multiplied by {factor} and rounded to 2 decimal places{extra}"
     clause = per_clause(rnd, gi, phr, considering(t, texts), out_txt, "", verb=pick(rnd, "computes", "calculates"))
-    return dict(clause=clause, tok=" ".join(parts), exp=format_lines(out, sep, ""), pre=pre)
+    return dict(tied=tied, clause=clause, tok=" ".join(parts), exp=format_lines(out, sep, ""), pre=pre)
 
 
 # ---------- assembling examples ----------
@@ -636,7 +648,8 @@ def build_example(rnd, t):
         task = f"Write a Ken program that:\n{items}."
     lines = defs + ([f"csv {t.file} as o"] if use_o else []) + [p["tok"] for p in pieces]
     return dict(task=task, program="\n".join(lines), exp="\n".join(line for p in pieces for line in p["exp"]),
-                csv=next((p["csv"] for p in pieces if "csv" in p), None), table=t.key)
+                csv=next((p["csv"] for p in pieces if "csv" in p), None), table=t.key,
+                ambiguous=any(p.get("tied") for p in pieces))
 
 
 def generate(rnd, tables, banned, seen, stats, work, want, accept):
@@ -705,7 +718,8 @@ def main():
         with open(out_dir / f"{name}.jsonl", "w", encoding="utf-8", newline="\n") as fh:
             for i, r in enumerate(sel):
                 fh.write(json.dumps(dict(id=f"{name}{i}", table=r["table"], task=r["task"], program=r["program"],
-                                         expected=r["exp"], csv=r["csv"]), ensure_ascii=False) + "\n")
+                                         expected=r["exp"], csv=r["csv"], ambiguous=r["ambiguous"]),
+                                   ensure_ascii=False) + "\n")
         print(name, len(sel))
     print("stats:", stats)
 

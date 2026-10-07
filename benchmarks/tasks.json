@@ -1,6 +1,6 @@
 [
   {"id": 1, "title": "Cancelled orders, and the five best-selling products", "skills": ["by", "top", "fmt"], "seen_in_training": true,
-   "task": "Write a Ken program that:\n1. prints the text `Cancelled:` followed by the number of orders with status `cancelled`;\n2. prints the text `Best sellers:` followed by the 5 products with the largest total quantity (`qty`) sold among orders with status `done`. The order must be descending and each line must have the format `product: units`."},
+   "task": "Write a Ken program that:\n1. prints the text `Cancelled:` on one line and, on the next line, the number of orders with status `cancelled`;\n2. prints the text `Best sellers:` on one line and, below it, the 5 products with the largest total quantity (`qty`) sold among orders with status `done`. The order must be descending and each line must have the format `product: units`."},
   {"id": 2, "title": "Revenue for each month", "skills": ["set", "slice", "by", "fmt"], "seen_in_training": true,
    "task": "Write a Ken program that computes, for orders with status `done`, the revenue (`qty` × `price`) in each month. Print the months in ascending order, one per line in the format `YYYY-MM: revenue`, with the revenue rounded to 2 decimal places."},
   {"id": 3, "title": "Share of returned orders in each category", "skills": ["as inside a block", "arithmetic"], "seen_in_training": true,

@@ -1,0 +1,180 @@
+{"lang": "py", "think": "off", "set": "unseen", "id": "test_unseen_table0", "attempt": 1, "ok": true, "tokens": 48, "reasoning_chars": 0, "sec": 2.0, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "unseen", "id": "test_unseen_table0", "attempt": 2, "ok": true, "tokens": 48, "reasoning_chars": 0, "sec": 1.7, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "unseen", "id": "test_unseen_table0", "attempt": 3, "ok": true, "tokens": 48, "reasoning_chars": 0, "sec": 1.7, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "unseen", "id": "test_unseen_table1", "attempt": 1, "ok": true, "tokens": 99, "reasoning_chars": 0, "sec": 3.6, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "unseen", "id": "test_unseen_table1", "attempt": 2, "ok": true, "tokens": 99, "reasoning_chars": 0, "sec": 3.4, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "unseen", "id": "test_unseen_table1", "attempt": 3, "ok": true, "tokens": 99, "reasoning_chars": 0, "sec": 3.4, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "unseen", "id": "test_unseen_table2", "attempt": 1, "ok": true, "tokens": 274, "reasoning_chars": 0, "sec": 9.6, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "unseen", "id": "test_unseen_table2", "attempt": 2, "ok": true, "tokens": 196, "reasoning_chars": 0, "sec": 6.7, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "unseen", "id": "test_unseen_table2", "attempt": 3, "ok": true, "tokens": 252, "reasoning_chars": 0, "sec": 8.5, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "unseen", "id": "test_unseen_table3", "attempt": 1, "ok": true, "tokens": 75, "reasoning_chars": 0, "sec": 2.9, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "unseen", "id": "test_unseen_table3", "attempt": 2, "ok": true, "tokens": 78, "reasoning_chars": 0, "sec": 2.7, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "unseen", "id": "test_unseen_table3", "attempt": 3, "ok": true, "tokens": 74, "reasoning_chars": 0, "sec": 2.6, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "unseen", "id": "test_unseen_table4", "attempt": 1, "ok": true, "tokens": 317, "reasoning_chars": 0, "sec": 10.9, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "unseen", "id": "test_unseen_table4", "attempt": 2, "ok": true, "tokens": 338, "reasoning_chars": 0, "sec": 11.4, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "unseen", "id": "test_unseen_table4", "attempt": 3, "ok": true, "tokens": 287, "reasoning_chars": 0, "sec": 9.8, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "unseen", "id": "test_unseen_table5", "attempt": 1, "ok": true, "tokens": 125, "reasoning_chars": 0, "sec": 4.6, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "unseen", "id": "test_unseen_table5", "attempt": 2, "ok": true, "tokens": 136, "reasoning_chars": 0, "sec": 4.6, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "unseen", "id": "test_unseen_table5", "attempt": 3, "ok": true, "tokens": 92, "reasoning_chars": 0, "sec": 3.2, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "unseen", "id": "test_unseen_table6", "attempt": 1, "ok": true, "tokens": 85, "reasoning_chars": 0, "sec": 3.2, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "unseen", "id": "test_unseen_table6", "attempt": 2, "ok": true, "tokens": 81, "reasoning_chars": 0, "sec": 2.8, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "unseen", "id": "test_unseen_table6", "attempt": 3, "ok": true, "tokens": 79, "reasoning_chars": 0, "sec": 2.7, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "unseen", "id": "test_unseen_table7", "attempt": 1, "ok": true, "tokens": 189, "reasoning_chars": 0, "sec": 6.6, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "unseen", "id": "test_unseen_table7", "attempt": 2, "ok": true, "tokens": 182, "reasoning_chars": 0, "sec": 6.1, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "unseen", "id": "test_unseen_table7", "attempt": 3, "ok": true, "tokens": 190, "reasoning_chars": 0, "sec": 6.4, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "unseen", "id": "test_unseen_table8", "attempt": 1, "ok": true, "tokens": 37, "reasoning_chars": 0, "sec": 1.7, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "unseen", "id": "test_unseen_table8", "attempt": 2, "ok": true, "tokens": 37, "reasoning_chars": 0, "sec": 1.3, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "unseen", "id": "test_unseen_table8", "attempt": 3, "ok": true, "tokens": 37, "reasoning_chars": 0, "sec": 1.3, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "unseen", "id": "test_unseen_table9", "attempt": 1, "ok": false, "tokens": 225, "reasoning_chars": 0, "sec": 7.8, "finish": "stop", "note": "different output"}
+{"lang": "py", "think": "off", "set": "unseen", "id": "test_unseen_table9", "attempt": 2, "ok": false, "tokens": 207, "reasoning_chars": 0, "sec": 7.0, "finish": "stop", "note": "different output"}
+{"lang": "py", "think": "off", "set": "unseen", "id": "test_unseen_table9", "attempt": 3, "ok": false, "tokens": 202, "reasoning_chars": 0, "sec": 6.8, "finish": "stop", "note": "different output"}
+{"lang": "py", "think": "off", "set": "unseen", "id": "test_unseen_table10", "attempt": 1, "ok": false, "tokens": 461, "reasoning_chars": 0, "sec": 15.9, "finish": "stop", "note": "different output"}
+{"lang": "py", "think": "off", "set": "unseen", "id": "test_unseen_table10", "attempt": 2, "ok": true, "tokens": 466, "reasoning_chars": 0, "sec": 15.7, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "unseen", "id": "test_unseen_table10", "attempt": 3, "ok": true, "tokens": 451, "reasoning_chars": 0, "sec": 15.2, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "unseen", "id": "test_unseen_table11", "attempt": 1, "ok": true, "tokens": 61, "reasoning_chars": 0, "sec": 2.5, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "unseen", "id": "test_unseen_table11", "attempt": 2, "ok": true, "tokens": 59, "reasoning_chars": 0, "sec": 2.1, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "unseen", "id": "test_unseen_table11", "attempt": 3, "ok": true, "tokens": 61, "reasoning_chars": 0, "sec": 2.1, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "unseen", "id": "test_unseen_table12", "attempt": 1, "ok": true, "tokens": 128, "reasoning_chars": 0, "sec": 4.6, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "unseen", "id": "test_unseen_table12", "attempt": 2, "ok": true, "tokens": 106, "reasoning_chars": 0, "sec": 3.6, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "unseen", "id": "test_unseen_table12", "attempt": 3, "ok": true, "tokens": 99, "reasoning_chars": 0, "sec": 3.4, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "unseen", "id": "test_unseen_table13", "attempt": 1, "ok": true, "tokens": 85, "reasoning_chars": 0, "sec": 3.2, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "unseen", "id": "test_unseen_table13", "attempt": 2, "ok": true, "tokens": 80, "reasoning_chars": 0, "sec": 2.8, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "unseen", "id": "test_unseen_table13", "attempt": 3, "ok": true, "tokens": 80, "reasoning_chars": 0, "sec": 2.8, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "unseen", "id": "test_unseen_table14", "attempt": 1, "ok": true, "tokens": 114, "reasoning_chars": 0, "sec": 4.2, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "unseen", "id": "test_unseen_table14", "attempt": 2, "ok": true, "tokens": 123, "reasoning_chars": 0, "sec": 4.2, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "unseen", "id": "test_unseen_table14", "attempt": 3, "ok": true, "tokens": 135, "reasoning_chars": 0, "sec": 4.6, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "unseen", "id": "test_unseen_table15", "attempt": 1, "ok": true, "tokens": 265, "reasoning_chars": 0, "sec": 9.3, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "unseen", "id": "test_unseen_table15", "attempt": 2, "ok": true, "tokens": 252, "reasoning_chars": 0, "sec": 8.5, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "unseen", "id": "test_unseen_table15", "attempt": 3, "ok": true, "tokens": 228, "reasoning_chars": 0, "sec": 7.7, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "unseen", "id": "test_unseen_table16", "attempt": 1, "ok": false, "tokens": 178, "reasoning_chars": 0, "sec": 6.4, "finish": "stop", "note": "different output"}
+{"lang": "py", "think": "off", "set": "unseen", "id": "test_unseen_table16", "attempt": 2, "ok": false, "tokens": 178, "reasoning_chars": 0, "sec": 6.0, "finish": "stop", "note": "different output"}
+{"lang": "py", "think": "off", "set": "unseen", "id": "test_unseen_table16", "attempt": 3, "ok": false, "tokens": 183, "reasoning_chars": 0, "sec": 6.2, "finish": "stop", "note": "different output"}
+{"lang": "py", "think": "off", "set": "unseen", "id": "test_unseen_table17", "attempt": 1, "ok": true, "tokens": 111, "reasoning_chars": 0, "sec": 4.1, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "unseen", "id": "test_unseen_table17", "attempt": 2, "ok": true, "tokens": 110, "reasoning_chars": 0, "sec": 3.8, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "unseen", "id": "test_unseen_table17", "attempt": 3, "ok": true, "tokens": 110, "reasoning_chars": 0, "sec": 3.8, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "unseen", "id": "test_unseen_table18", "attempt": 1, "ok": true, "tokens": 47, "reasoning_chars": 0, "sec": 1.9, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "unseen", "id": "test_unseen_table18", "attempt": 2, "ok": true, "tokens": 47, "reasoning_chars": 0, "sec": 1.7, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "unseen", "id": "test_unseen_table18", "attempt": 3, "ok": true, "tokens": 47, "reasoning_chars": 0, "sec": 1.6, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "unseen", "id": "test_unseen_table19", "attempt": 1, "ok": true, "tokens": 52, "reasoning_chars": 0, "sec": 2.0, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "unseen", "id": "test_unseen_table19", "attempt": 2, "ok": true, "tokens": 68, "reasoning_chars": 0, "sec": 2.4, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "unseen", "id": "test_unseen_table19", "attempt": 3, "ok": true, "tokens": 74, "reasoning_chars": 0, "sec": 2.6, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "unseen", "id": "test_unseen_table20", "attempt": 1, "ok": false, "tokens": 165, "reasoning_chars": 0, "sec": 5.8, "finish": "stop", "note": "different output"}
+{"lang": "py", "think": "off", "set": "unseen", "id": "test_unseen_table20", "attempt": 2, "ok": false, "tokens": 169, "reasoning_chars": 0, "sec": 5.7, "finish": "stop", "note": "different output"}
+{"lang": "py", "think": "off", "set": "unseen", "id": "test_unseen_table20", "attempt": 3, "ok": true, "tokens": 164, "reasoning_chars": 0, "sec": 5.5, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "unseen", "id": "test_unseen_table21", "attempt": 1, "ok": false, "tokens": 49, "reasoning_chars": 0, "sec": 2.0, "finish": "stop", "note": "different output"}
+{"lang": "py", "think": "off", "set": "unseen", "id": "test_unseen_table21", "attempt": 2, "ok": false, "tokens": 45, "reasoning_chars": 0, "sec": 1.6, "finish": "stop", "note": "different output"}
+{"lang": "py", "think": "off", "set": "unseen", "id": "test_unseen_table21", "attempt": 3, "ok": false, "tokens": 49, "reasoning_chars": 0, "sec": 1.7, "finish": "stop", "note": "different output"}
+{"lang": "py", "think": "off", "set": "unseen", "id": "test_unseen_table22", "attempt": 1, "ok": true, "tokens": 81, "reasoning_chars": 0, "sec": 3.0, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "unseen", "id": "test_unseen_table22", "attempt": 2, "ok": true, "tokens": 80, "reasoning_chars": 0, "sec": 2.8, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "unseen", "id": "test_unseen_table22", "attempt": 3, "ok": true, "tokens": 76, "reasoning_chars": 0, "sec": 2.6, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "unseen", "id": "test_unseen_table23", "attempt": 1, "ok": false, "tokens": 51, "reasoning_chars": 0, "sec": 2.1, "finish": "stop", "note": "different output"}
+{"lang": "py", "think": "off", "set": "unseen", "id": "test_unseen_table23", "attempt": 2, "ok": false, "tokens": 51, "reasoning_chars": 0, "sec": 1.8, "finish": "stop", "note": "different output"}
+{"lang": "py", "think": "off", "set": "unseen", "id": "test_unseen_table23", "attempt": 3, "ok": false, "tokens": 53, "reasoning_chars": 0, "sec": 1.8, "finish": "stop", "note": "different output"}
+{"lang": "py", "think": "off", "set": "unseen", "id": "test_unseen_table24", "attempt": 1, "ok": false, "tokens": 114, "reasoning_chars": 0, "sec": 4.1, "finish": "stop", "note": "different output"}
+{"lang": "py", "think": "off", "set": "unseen", "id": "test_unseen_table24", "attempt": 2, "ok": false, "tokens": 82, "reasoning_chars": 0, "sec": 2.8, "finish": "stop", "note": "different output"}
+{"lang": "py", "think": "off", "set": "unseen", "id": "test_unseen_table24", "attempt": 3, "ok": false, "tokens": 120, "reasoning_chars": 0, "sec": 4.1, "finish": "stop", "note": "different output"}
+{"lang": "py", "think": "off", "set": "unseen", "id": "test_unseen_table25", "attempt": 1, "ok": true, "tokens": 320, "reasoning_chars": 0, "sec": 11.1, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "unseen", "id": "test_unseen_table25", "attempt": 2, "ok": true, "tokens": 290, "reasoning_chars": 0, "sec": 9.8, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "unseen", "id": "test_unseen_table25", "attempt": 3, "ok": true, "tokens": 345, "reasoning_chars": 0, "sec": 11.7, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "unseen", "id": "test_unseen_table26", "attempt": 1, "ok": false, "tokens": 202, "reasoning_chars": 0, "sec": 7.2, "finish": "stop", "note": "different output"}
+{"lang": "py", "think": "off", "set": "unseen", "id": "test_unseen_table26", "attempt": 2, "ok": false, "tokens": 167, "reasoning_chars": 0, "sec": 6.2, "finish": "stop", "note": "different output"}
+{"lang": "py", "think": "off", "set": "unseen", "id": "test_unseen_table26", "attempt": 3, "ok": false, "tokens": 183, "reasoning_chars": 0, "sec": 6.2, "finish": "stop", "note": "different output"}
+{"lang": "py", "think": "off", "set": "unseen", "id": "test_unseen_table27", "attempt": 1, "ok": true, "tokens": 141, "reasoning_chars": 0, "sec": 5.2, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "unseen", "id": "test_unseen_table27", "attempt": 2, "ok": true, "tokens": 133, "reasoning_chars": 0, "sec": 4.9, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "unseen", "id": "test_unseen_table27", "attempt": 3, "ok": true, "tokens": 133, "reasoning_chars": 0, "sec": 4.7, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "unseen", "id": "test_unseen_table28", "attempt": 1, "ok": false, "tokens": 129, "reasoning_chars": 0, "sec": 5.0, "finish": "stop", "note": "different output"}
+{"lang": "py", "think": "off", "set": "unseen", "id": "test_unseen_table28", "attempt": 2, "ok": false, "tokens": 129, "reasoning_chars": 0, "sec": 4.4, "finish": "stop", "note": "different output"}
+{"lang": "py", "think": "off", "set": "unseen", "id": "test_unseen_table28", "attempt": 3, "ok": false, "tokens": 132, "reasoning_chars": 0, "sec": 4.5, "finish": "stop", "note": "different output"}
+{"lang": "py", "think": "off", "set": "unseen", "id": "test_unseen_table29", "attempt": 1, "ok": true, "tokens": 215, "reasoning_chars": 0, "sec": 7.6, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "unseen", "id": "test_unseen_table29", "attempt": 2, "ok": true, "tokens": 163, "reasoning_chars": 0, "sec": 5.5, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "unseen", "id": "test_unseen_table29", "attempt": 3, "ok": true, "tokens": 185, "reasoning_chars": 0, "sec": 6.3, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "unseen", "id": "test_unseen_table30", "attempt": 1, "ok": false, "tokens": 331, "reasoning_chars": 0, "sec": 11.9, "finish": "stop", "note": "different output"}
+{"lang": "py", "think": "off", "set": "unseen", "id": "test_unseen_table30", "attempt": 2, "ok": false, "tokens": 405, "reasoning_chars": 0, "sec": 14.6, "finish": "stop", "note": "different output"}
+{"lang": "py", "think": "off", "set": "unseen", "id": "test_unseen_table30", "attempt": 3, "ok": false, "tokens": 315, "reasoning_chars": 0, "sec": 12.3, "finish": "stop", "note": "different output"}
+{"lang": "py", "think": "off", "set": "unseen", "id": "test_unseen_table31", "attempt": 1, "ok": true, "tokens": 54, "reasoning_chars": 0, "sec": 2.5, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "unseen", "id": "test_unseen_table31", "attempt": 2, "ok": true, "tokens": 54, "reasoning_chars": 0, "sec": 1.9, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "unseen", "id": "test_unseen_table31", "attempt": 3, "ok": true, "tokens": 54, "reasoning_chars": 0, "sec": 1.9, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "unseen", "id": "test_unseen_table32", "attempt": 1, "ok": false, "tokens": 489, "reasoning_chars": 0, "sec": 16.8, "finish": "stop", "note": "different output"}
+{"lang": "py", "think": "off", "set": "unseen", "id": "test_unseen_table32", "attempt": 2, "ok": false, "tokens": 261, "reasoning_chars": 0, "sec": 9.2, "finish": "stop", "note": "different output"}
+{"lang": "py", "think": "off", "set": "unseen", "id": "test_unseen_table32", "attempt": 3, "ok": false, "tokens": 321, "reasoning_chars": 0, "sec": 11.5, "finish": "stop", "note": "different output"}
+{"lang": "py", "think": "off", "set": "unseen", "id": "test_unseen_table33", "attempt": 1, "ok": true, "tokens": 163, "reasoning_chars": 0, "sec": 6.1, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "unseen", "id": "test_unseen_table33", "attempt": 2, "ok": true, "tokens": 196, "reasoning_chars": 0, "sec": 7.1, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "unseen", "id": "test_unseen_table33", "attempt": 3, "ok": true, "tokens": 102, "reasoning_chars": 0, "sec": 3.5, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "unseen", "id": "test_unseen_table34", "attempt": 1, "ok": true, "tokens": 81, "reasoning_chars": 0, "sec": 3.4, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "unseen", "id": "test_unseen_table34", "attempt": 2, "ok": true, "tokens": 81, "reasoning_chars": 0, "sec": 3.0, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "unseen", "id": "test_unseen_table34", "attempt": 3, "ok": true, "tokens": 82, "reasoning_chars": 0, "sec": 2.8, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "unseen", "id": "test_unseen_table35", "attempt": 1, "ok": false, "tokens": 96, "reasoning_chars": 0, "sec": 3.8, "finish": "stop", "note": "different output"}
+{"lang": "py", "think": "off", "set": "unseen", "id": "test_unseen_table35", "attempt": 2, "ok": false, "tokens": 125, "reasoning_chars": 0, "sec": 4.3, "finish": "stop", "note": "different output"}
+{"lang": "py", "think": "off", "set": "unseen", "id": "test_unseen_table35", "attempt": 3, "ok": false, "tokens": 113, "reasoning_chars": 0, "sec": 3.9, "finish": "stop", "note": "different output"}
+{"lang": "py", "think": "off", "set": "unseen", "id": "test_unseen_table36", "attempt": 1, "ok": true, "tokens": 139, "reasoning_chars": 0, "sec": 5.3, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "unseen", "id": "test_unseen_table36", "attempt": 2, "ok": true, "tokens": 100, "reasoning_chars": 0, "sec": 3.5, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "unseen", "id": "test_unseen_table36", "attempt": 3, "ok": true, "tokens": 133, "reasoning_chars": 0, "sec": 4.6, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "unseen", "id": "test_unseen_table37", "attempt": 1, "ok": true, "tokens": 80, "reasoning_chars": 0, "sec": 3.1, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "unseen", "id": "test_unseen_table37", "attempt": 2, "ok": true, "tokens": 89, "reasoning_chars": 0, "sec": 3.1, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "unseen", "id": "test_unseen_table37", "attempt": 3, "ok": true, "tokens": 77, "reasoning_chars": 0, "sec": 2.7, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "unseen", "id": "test_unseen_table38", "attempt": 1, "ok": true, "tokens": 76, "reasoning_chars": 0, "sec": 2.8, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "unseen", "id": "test_unseen_table38", "attempt": 2, "ok": true, "tokens": 76, "reasoning_chars": 0, "sec": 2.7, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "unseen", "id": "test_unseen_table38", "attempt": 3, "ok": true, "tokens": 68, "reasoning_chars": 0, "sec": 2.4, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "unseen", "id": "test_unseen_table39", "attempt": 1, "ok": true, "tokens": 81, "reasoning_chars": 0, "sec": 3.0, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "unseen", "id": "test_unseen_table39", "attempt": 2, "ok": true, "tokens": 85, "reasoning_chars": 0, "sec": 2.9, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "unseen", "id": "test_unseen_table39", "attempt": 3, "ok": true, "tokens": 85, "reasoning_chars": 0, "sec": 2.9, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "unseen", "id": "test_unseen_table40", "attempt": 1, "ok": true, "tokens": 109, "reasoning_chars": 0, "sec": 4.0, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "unseen", "id": "test_unseen_table40", "attempt": 2, "ok": true, "tokens": 159, "reasoning_chars": 0, "sec": 5.4, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "unseen", "id": "test_unseen_table40", "attempt": 3, "ok": true, "tokens": 103, "reasoning_chars": 0, "sec": 3.5, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "unseen", "id": "test_unseen_table41", "attempt": 1, "ok": true, "tokens": 109, "reasoning_chars": 0, "sec": 4.0, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "unseen", "id": "test_unseen_table41", "attempt": 2, "ok": true, "tokens": 196, "reasoning_chars": 0, "sec": 6.6, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "unseen", "id": "test_unseen_table41", "attempt": 3, "ok": true, "tokens": 105, "reasoning_chars": 0, "sec": 3.6, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "unseen", "id": "test_unseen_table42", "attempt": 1, "ok": true, "tokens": 102, "reasoning_chars": 0, "sec": 3.8, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "unseen", "id": "test_unseen_table42", "attempt": 2, "ok": true, "tokens": 128, "reasoning_chars": 0, "sec": 4.4, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "unseen", "id": "test_unseen_table42", "attempt": 3, "ok": true, "tokens": 147, "reasoning_chars": 0, "sec": 5.0, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "unseen", "id": "test_unseen_table43", "attempt": 1, "ok": false, "tokens": 177, "reasoning_chars": 0, "sec": 6.3, "finish": "stop", "note": "different output"}
+{"lang": "py", "think": "off", "set": "unseen", "id": "test_unseen_table43", "attempt": 2, "ok": false, "tokens": 110, "reasoning_chars": 0, "sec": 3.8, "finish": "stop", "note": "different output"}
+{"lang": "py", "think": "off", "set": "unseen", "id": "test_unseen_table43", "attempt": 3, "ok": false, "tokens": 151, "reasoning_chars": 0, "sec": 5.2, "finish": "stop", "note": "different output"}
+{"lang": "py", "think": "off", "set": "unseen", "id": "test_unseen_table44", "attempt": 1, "ok": true, "tokens": 110, "reasoning_chars": 0, "sec": 4.4, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "unseen", "id": "test_unseen_table44", "attempt": 2, "ok": true, "tokens": 110, "reasoning_chars": 0, "sec": 3.9, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "unseen", "id": "test_unseen_table44", "attempt": 3, "ok": true, "tokens": 112, "reasoning_chars": 0, "sec": 4.1, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "unseen", "id": "test_unseen_table45", "attempt": 1, "ok": true, "tokens": 78, "reasoning_chars": 0, "sec": 3.2, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "unseen", "id": "test_unseen_table45", "attempt": 2, "ok": true, "tokens": 88, "reasoning_chars": 0, "sec": 3.4, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "unseen", "id": "test_unseen_table45", "attempt": 3, "ok": true, "tokens": 80, "reasoning_chars": 0, "sec": 2.9, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "unseen", "id": "test_unseen_table46", "attempt": 1, "ok": true, "tokens": 168, "reasoning_chars": 0, "sec": 6.3, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "unseen", "id": "test_unseen_table46", "attempt": 2, "ok": true, "tokens": 150, "reasoning_chars": 0, "sec": 5.4, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "unseen", "id": "test_unseen_table46", "attempt": 3, "ok": true, "tokens": 179, "reasoning_chars": 0, "sec": 6.5, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "unseen", "id": "test_unseen_table47", "attempt": 1, "ok": true, "tokens": 158, "reasoning_chars": 0, "sec": 6.0, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "unseen", "id": "test_unseen_table47", "attempt": 2, "ok": true, "tokens": 188, "reasoning_chars": 0, "sec": 6.8, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "unseen", "id": "test_unseen_table47", "attempt": 3, "ok": true, "tokens": 181, "reasoning_chars": 0, "sec": 6.6, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "unseen", "id": "test_unseen_table48", "attempt": 1, "ok": true, "tokens": 187, "reasoning_chars": 0, "sec": 7.0, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "unseen", "id": "test_unseen_table48", "attempt": 2, "ok": true, "tokens": 162, "reasoning_chars": 0, "sec": 5.9, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "unseen", "id": "test_unseen_table48", "attempt": 3, "ok": false, "tokens": 166, "reasoning_chars": 0, "sec": 5.9, "finish": "stop", "note": "different output"}
+{"lang": "py", "think": "off", "set": "unseen", "id": "test_unseen_table49", "attempt": 1, "ok": false, "tokens": 254, "reasoning_chars": 0, "sec": 9.6, "finish": "stop", "note": "different output"}
+{"lang": "py", "think": "off", "set": "unseen", "id": "test_unseen_table49", "attempt": 2, "ok": false, "tokens": 207, "reasoning_chars": 0, "sec": 7.5, "finish": "stop", "note": "different output"}
+{"lang": "py", "think": "off", "set": "unseen", "id": "test_unseen_table49", "attempt": 3, "ok": false, "tokens": 207, "reasoning_chars": 0, "sec": 7.4, "finish": "stop", "note": "different output"}
+{"lang": "py", "think": "off", "set": "unseen", "id": "test_unseen_table50", "attempt": 1, "ok": true, "tokens": 119, "reasoning_chars": 0, "sec": 4.7, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "unseen", "id": "test_unseen_table50", "attempt": 2, "ok": true, "tokens": 106, "reasoning_chars": 0, "sec": 3.8, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "unseen", "id": "test_unseen_table50", "attempt": 3, "ok": true, "tokens": 140, "reasoning_chars": 0, "sec": 5.2, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "unseen", "id": "test_unseen_table51", "attempt": 1, "ok": true, "tokens": 53, "reasoning_chars": 0, "sec": 2.3, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "unseen", "id": "test_unseen_table51", "attempt": 2, "ok": true, "tokens": 53, "reasoning_chars": 0, "sec": 2.0, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "unseen", "id": "test_unseen_table51", "attempt": 3, "ok": false, "tokens": 51, "reasoning_chars": 0, "sec": 1.9, "finish": "stop", "note": "different output"}
+{"lang": "py", "think": "off", "set": "unseen", "id": "test_unseen_table52", "attempt": 1, "ok": true, "tokens": 206, "reasoning_chars": 0, "sec": 7.6, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "unseen", "id": "test_unseen_table52", "attempt": 2, "ok": true, "tokens": 194, "reasoning_chars": 0, "sec": 7.1, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "unseen", "id": "test_unseen_table52", "attempt": 3, "ok": true, "tokens": 172, "reasoning_chars": 0, "sec": 6.3, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "unseen", "id": "test_unseen_table53", "attempt": 1, "ok": false, "tokens": 252, "reasoning_chars": 0, "sec": 9.4, "finish": "stop", "note": "different output"}
+{"lang": "py", "think": "off", "set": "unseen", "id": "test_unseen_table53", "attempt": 2, "ok": false, "tokens": 177, "reasoning_chars": 0, "sec": 6.6, "finish": "stop", "note": "different output"}
+{"lang": "py", "think": "off", "set": "unseen", "id": "test_unseen_table53", "attempt": 3, "ok": false, "tokens": 211, "reasoning_chars": 0, "sec": 7.7, "finish": "stop", "note": "different output"}
+{"lang": "py", "think": "off", "set": "unseen", "id": "test_unseen_table54", "attempt": 1, "ok": false, "tokens": 307, "reasoning_chars": 0, "sec": 11.3, "finish": "stop", "note": "different output"}
+{"lang": "py", "think": "off", "set": "unseen", "id": "test_unseen_table54", "attempt": 2, "ok": false, "tokens": 295, "reasoning_chars": 0, "sec": 10.6, "finish": "stop", "note": "different output"}
+{"lang": "py", "think": "off", "set": "unseen", "id": "test_unseen_table54", "attempt": 3, "ok": false, "tokens": 309, "reasoning_chars": 0, "sec": 11.4, "finish": "stop", "note": "different output"}
+{"lang": "py", "think": "off", "set": "unseen", "id": "test_unseen_table55", "attempt": 1, "ok": true, "tokens": 97, "reasoning_chars": 0, "sec": 4.0, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "unseen", "id": "test_unseen_table55", "attempt": 2, "ok": true, "tokens": 112, "reasoning_chars": 0, "sec": 4.3, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "unseen", "id": "test_unseen_table55", "attempt": 3, "ok": true, "tokens": 112, "reasoning_chars": 0, "sec": 4.1, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "unseen", "id": "test_unseen_table56", "attempt": 1, "ok": true, "tokens": 92, "reasoning_chars": 0, "sec": 3.7, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "unseen", "id": "test_unseen_table56", "attempt": 2, "ok": true, "tokens": 92, "reasoning_chars": 0, "sec": 3.3, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "unseen", "id": "test_unseen_table56", "attempt": 3, "ok": true, "tokens": 96, "reasoning_chars": 0, "sec": 3.6, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "unseen", "id": "test_unseen_table57", "attempt": 1, "ok": true, "tokens": 58, "reasoning_chars": 0, "sec": 2.5, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "unseen", "id": "test_unseen_table57", "attempt": 2, "ok": true, "tokens": 63, "reasoning_chars": 0, "sec": 2.5, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "unseen", "id": "test_unseen_table57", "attempt": 3, "ok": true, "tokens": 67, "reasoning_chars": 0, "sec": 2.5, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "unseen", "id": "test_unseen_table58", "attempt": 1, "ok": true, "tokens": 83, "reasoning_chars": 0, "sec": 3.3, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "unseen", "id": "test_unseen_table58", "attempt": 2, "ok": true, "tokens": 83, "reasoning_chars": 0, "sec": 3.1, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "unseen", "id": "test_unseen_table58", "attempt": 3, "ok": true, "tokens": 83, "reasoning_chars": 0, "sec": 3.0, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "unseen", "id": "test_unseen_table59", "attempt": 1, "ok": true, "tokens": 126, "reasoning_chars": 0, "sec": 4.9, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "unseen", "id": "test_unseen_table59", "attempt": 2, "ok": false, "tokens": 185, "reasoning_chars": 0, "sec": 6.6, "finish": "stop", "note": "different output"}
+{"lang": "py", "think": "off", "set": "unseen", "id": "test_unseen_table59", "attempt": 3, "ok": true, "tokens": 113, "reasoning_chars": 0, "sec": 4.1, "finish": "stop", "note": ""}

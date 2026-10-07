@@ -56,3 +56,32 @@ def test_a_bad_argument_is_an_error(tmp_path):
         compare.main([f"M|Ken|off={tmp_path / 'nope.jsonl'}"])
     with pytest.raises(SystemExit, match="expected model"):
         compare.main(["only a label=x"])
+
+
+def test_questions_that_depend_on_tie_breaking_are_left_out(monkeypatch):
+    monkeypatch.setattr(compare, "ambiguous_ids", lambda: {"q2"})
+    data = [dict(set="gen", id="q1", ok=True, tokens=10), dict(set="gen", id="q2", ok=False, tokens=10)]
+    fair_row = compare.table([("M", "Python", "off", data)]).splitlines()[-1]
+    strict_row = compare.table([("M", "Python", "off", data)], strict=True).splitlines()[-1]
+    assert "1/1 (100%)" in fair_row and "1/2 (50%)" in strict_row
+
+
+def test_the_generated_test_sets_mark_their_ambiguous_questions():
+    ids = compare.ambiguous_ids()
+    assert 0 < len(ids) < 100                     # some, but far from all, of the 155 generated test questions
+    assert all(i.startswith(("test", "test_unseen_table")) for i in ids)
+
+
+def test_label_split_separates_questions_that_ask_for_a_label_first(monkeypatch):
+    monkeypatch.setattr(compare, "ambiguous_ids", lambda: {"q3"})
+    monkeypatch.setattr(compare, "label_ids", lambda: {"q2", "q3"})
+    data = [dict(set="gen", id="q1", ok=True, tokens=1), dict(set="gen", id="q2", ok=False, tokens=1),
+            dict(set="unseen", id="q3", ok=False, tokens=1), dict(set="unseen", id="q4", ok=True, tokens=1),
+            dict(set="bench", id="bench1", ok=False, tokens=1)]
+    # q3 is dropped as a tie, the benchmark row is not a generated question
+    assert compare.label_split(data) == ("2/2 (100%)", "0/1 (0%)")
+
+
+def test_the_data_marks_questions_with_a_label():
+    ids = compare.label_ids()
+    assert 0 < len(ids) < 60

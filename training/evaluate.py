@@ -2,6 +2,10 @@
 
     python -m training.evaluate --adapter none --n 3 --tag base
     python -m training.evaluate --adapter training/out/adapter --n 3 --tag finetuned
+    python -m training.evaluate --adapter none --lang py --n 3 --tag base_python    # the same model, asked for Python
+
+``--lang py`` gives the model the Python prompt that ``benchmarks/run_llama.py`` gives other models (the table
+description, "Python 3, pandas available", the task) instead of the Ken reference, and runs the program with Python.
 
 Three sets:
 
@@ -20,6 +24,7 @@ import sys
 import time
 
 from benchmarks.expected import expected, tasks
+from benchmarks.run_llama import make_prompt, run_python
 from benchmarks.scoring import check_csv_spec, run_isolated, same_out, scratch_dir
 from kenlang.llm import extract_code
 
@@ -51,9 +56,21 @@ def unseen_items():
     return generated_items("test_unseen_table", "unseen")
 
 
-def score(code, item):
+def render(tok, item, lang):
+    """The prompt of one item, as chat text with reasoning off."""
+    description = TABLES[item["table"]].description
+    if lang == "ken":
+        return render_prompt(tok, item["task"], description)
+    return tok.apply_chat_template([{"role": "user", "content": make_prompt("py", item["task"], description)}],
+                                   tokenize=False, add_generation_prompt=True, enable_thinking=False)
+
+
+def score(code, item, lang="ken"):
     with scratch_dir(TABLES[item["table"]].csv) as work:
-        ok_run, out = run_isolated(code, work, python=sys.executable)
+        if lang == "ken":
+            ok_run, out = run_isolated(code, work, python=sys.executable)
+        else:
+            ok_run, out = run_python(code, work)
         if not ok_run:
             return False, out
         if not same_out(out, item["expected"]):
@@ -71,8 +88,10 @@ def main():
     ap.add_argument("--sets", default="bench,gen,unseen")
     ap.add_argument("--limit", type=int, default=0)
     ap.add_argument("--tag", default="eval")
-    ap.add_argument("--max-new", type=int, default=400)
+    ap.add_argument("--lang", choices=["ken", "py"], default="ken")
+    ap.add_argument("--max-new", type=int, default=0, help="default: 400 tokens for Ken, 800 for Python")
     a = ap.parse_args()
+    max_new = a.max_new or (400 if a.lang == "ken" else 800)
 
     from unsloth import FastModel  # noqa: I001  (must be imported before transformers/trl)
     import torch
@@ -91,17 +110,16 @@ def main():
     res_path.write_text("", encoding="utf-8")
     results = []
     for it in items:
-        prompt = render_prompt(tok, it["task"], TABLES[it["table"]].description)
-        enc = tok(prompt, return_tensors="pt", add_special_tokens=False).to(model.device)
+        enc = tok(render(tok, it, a.lang), return_tensors="pt", add_special_tokens=False).to(model.device)
         for k in range(1, a.n + 1):
             t0 = time.time()
             with torch.no_grad():
-                gen = model.generate(**enc, max_new_tokens=a.max_new, do_sample=True, temperature=0.6,
+                gen = model.generate(**enc, max_new_tokens=max_new, do_sample=True, temperature=0.6,
                                      top_p=0.95, top_k=64, pad_token_id=tok.pad_token_id)
             raw = tok.decode(gen[0, enc["input_ids"].shape[1]:], skip_special_tokens=True)
             code = extract_code(raw)
-            ok, note = score(code, it)
-            row = dict(id=it["id"], set=it["set"], table=it["table"], attempt=k, ok=bool(ok),
+            ok, note = score(code, it, a.lang)
+            row = dict(id=it["id"], set=it["set"], table=it["table"], lang=a.lang, attempt=k, ok=bool(ok),
                        sec=round(time.time() - t0, 1),
                        tokens=int(gen.shape[1] - enc["input_ids"].shape[1]), note=note, code=code)
             results.append(row)

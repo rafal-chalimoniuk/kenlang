@@ -117,28 +117,59 @@ correct output that the tests check.
 
 I measured it. A model gets a task in English and a description of a table, answers with a program, and the
 program is run. An answer counts only if it runs and prints exactly the correct result, which I computed
-separately with pandas. Every question was tried three times, temperature 0.6, no reasoning phase.
+separately with pandas. Every question was tried three times, temperature 0.6.
 
-Gemma 4 (12 billion parameters, squeezed to 4 bits), before and after training on 2,020 generated examples:
+The first table shows Gemma 4 (12 billion parameters, squeezed to 4 bits) before and after training on 2,020
+generated examples, with no reasoning phase:
 
 | Questions | Gemma 4 12B | After training |
 |---|---|---|
 | 7 written by hand, about `orders.csv` | 1/21 (5%) | **21/21 (100%)** |
-| 95 generated, about the three training tables | 2/285 (1%) | **279/285 (98%)** |
-| 60 generated, about a table it never saw (`grades.csv`) | 7/180 (4%) | **176/180 (98%)** |
+| 79 generated, about the three training tables | 2/237 (1%) | **234/237 (99%)** |
+| 45 generated, about a table it never saw (`grades.csv`) | 7/135 (5%) | **135/135 (100%)** |
 
 The last row is the one to look at. The model never saw that table during training, and its columns and shape are
 different, so the result shows that the model learned the language and not one dataset. The hand-written questions
 are about a table it did see, and the skills they need are in the training data (the tasks and answers are not), so
 that row says less. Seven questions is also a small test.
 
-The trained model writes short answers: 52 tokens on average, against 172 for the untrained one. A *token* is a
-small piece of text, roughly three-quarters of a word.
+The second table puts the trained model next to the same Gemma 4 12B without training, asked for Python, and next
+to **Qwen3.8-27B**, a general model more than twice its size (5-bit, run with llama.cpp), which got the same
+questions in Ken (with the language reference in the prompt) and in Python with pandas. The token column is
+measured on the seven hand-written tasks.
 
-The 10 wrong answers out of 465 are all in the harder tasks: two-part programs, wrongly chosen class thresholds,
-a value kept with `as` inside a block, or `if` applied to a whole column (which the language does not support). The
-full story, including what models tend to get wrong, is in
-[docs/llm.md](https://github.com/rafal-chalimoniuk/kenlang/blob/main/docs/llm.md).
+| Model | Language | Reasoning | Hand-written | Generated | Table never seen | Tokens per answer |
+|---|---|---|---|---|---|---|
+| Gemma 4 12B + adapter | Ken | off | 21/21 (100%) | 234/237 (99%) | 135/135 (100%) | 45 |
+| Gemma 4 12B, no training | Python | off | 20/21 (95%) | 211/237 (89%) | 104/135 (77%) | 214 |
+| Qwen3.8-27B | Python | off | 21/21 (100%) | 229/237 (97%) | 121/135 (90%) | 114 |
+| Qwen3.8-27B | Python | on | 21/21 (100%) | | | 1,644 |
+| Qwen3.8-27B | Ken | off | 7/21 (33%) | 52/237 (22%) | 45/135 (33%) | 85 |
+| Qwen3.8-27B | Ken | on | 20/21 (95%) | | | 11,578 |
+
+What I read from it, and what I do not:
+
+- **In Python a 27B model is already very good at these tasks.** The trained 12B model writing Ken matches it, and
+  its answers are about 2.5 times shorter (45 tokens against 114). Against Python with reasoning (1,644 tokens)
+  the gap is larger, but reasoning does not make Qwen more accurate here.
+- **Training helps the 12B model, not only the length.** The same model without training writes Python well
+  (95%, 89% and 77%) but wordily (214 tokens). In Ken after training it is more accurate on every set and writes
+  about five times less per correct answer. Part of the gain on the generated sets is the conventions of the
+  questions: without the label questions below, Python gets 92% untrained against 99% for the trained model.
+- **Ken is hard for a model that has never seen it.** Qwen gets 33% without reasoning. With reasoning it reaches 95%,
+  but at about 11,600 tokens per answer. Training on a few thousand examples gives the same accuracy in 45 tokens.
+- **The seven programs themselves are shorter in Ken** than in Python (306 tokens against 808; 528 in pandas), see
+  [docs/llm.md](https://github.com/rafal-chalimoniuk/kenlang/blob/main/docs/llm.md#how-long-are-the-programs).
+- **All of this is one domain,** tasks on tables, with a single training run. It says nothing yet about other kinds
+  of programs, which is what the [roadmap](https://github.com/rafal-chalimoniuk/kenlang/blob/main/ROADMAP.md) is about.
+
+Two things in the scoring are worth knowing. 31 of the 155 generated questions are not counted, because their correct
+output depends on how ties between equal values are broken, which the question does not say; the complete results
+are kept. Counting them, the trained model gets 98% on both generated sets (279/285 and 176/180) and Qwen in Python
+82% and 73%; some of the trained model's seven wrong answers there are real mistakes, not tie-breaking. And some generated questions ask to print a label first. Qwen in Python gets 98% on the questions without
+one and 75% on those with one, and the untrained Gemma in Python 92% and 54%, because they tend to put the label
+and the value on one line while the questions expect two. The trained model learned that convention. The full story, including what models tend to get wrong, is
+in [docs/llm.md](https://github.com/rafal-chalimoniuk/kenlang/blob/main/docs/llm.md).
 
 ## What is in this repository
 

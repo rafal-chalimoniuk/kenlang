@@ -25,18 +25,24 @@ Notes from practice:
 
 All scores are the share of attempts whose program ran and printed the correct output. Correct outputs are computed
 independently with pandas (see [benchmarks/](../benchmarks/README.md)). Sampling temperature was 0.6, three attempts
-per question, no reasoning phase. All prompts are English.
+per question. All prompts are English. The raw results of every run are in
+[`benchmarks/results/`](../benchmarks/results) (Qwen) and in `training/out/` while training (Gemma; a copy is
+published with the model).
+
+Three sets of questions: 7 written by hand about `orders.csv` (**hand-written**); 95 generated from the same
+templates as the training data, about the three tables used in training (**generated**); and 60 generated about
+`grades.csv`, a table of a different shape that was never used in training (**table never seen**).
 
 ### Fine-tuning Gemma 4 12B
 
 Gemma 4 12B, loaded in 4 bits, before and after QLoRA training on 2,020 generated examples
-([training/](../training/README.md)):
+([training/](../training/README.md)), no reasoning phase:
 
 | Questions | Gemma 4 12B | After training |
 |---|---|---|
-| 7 written by hand, about `orders.csv` | 1/21 (5%) | **21/21 (100%)** |
-| 95 generated, about the three training tables | 2/285 (1%) | **279/285 (98%)** |
-| 60 generated, about a table it never saw (`grades.csv`) | 7/180 (4%) | **176/180 (98%)** |
+| Hand-written (7) | 1/21 (5%) | **21/21 (100%)** |
+| Generated (79 counted) | 2/237 (1%) | **234/237 (99%)** |
+| Table never seen (45 counted) | 7/135 (5%) | **135/135 (100%)** |
 
 | Task | Skills | Gemma 4 12B | After training |
 |---|---|---|---|
@@ -48,25 +54,74 @@ Gemma 4 12B, loaded in 4 bits, before and after QLoRA training on 2,020 generate
 | 6 | `where in`, `where has` | 0/3 | 3/3 |
 | 7 | `pick`, `save` | 1/3 | 3/3 |
 
-Mean answer length: 172 tokens for the untrained model, 52 after training.
-
 How to read this:
 
 - **The unseen table is the informative row.** The model never saw `grades.csv`; it has other column names and no
-  price column. 98% there says the model learned the language and not one dataset.
+  price column. 100% there says the model learned the language and not one dataset.
 - **The hand-written tasks say less than they used to.** Their skills (`if`, `def`, `as` inside a block) are in the
   training data, although none of the tasks or answers is, and the table is one the model trained on. Seven tasks is
   also a small sample: one task is 14 percentage points.
 - **The generated tasks share their templates with the training data**, so they are the easiest to pass.
+- **The three wrong answers** counted above are two attempts at one two-part program, in which a ratio kept with `as`
+  inside a block is written wrongly, and one attempt at a classification whose thresholds do not fit the question
+  (`ge 50` for a rating from 1 to 5).
+- **Counting everything, with the tie-dependent questions** described below, the model has 10 wrong answers out of 465
+  (279/285 and 176/180, 98% on both generated sets). Several of the seven that the tables leave out are real
+  mistakes, not tie-breaking: an `if` applied to a whole column, a wrong `as` computation. Leaving a question out
+  removes its wrong answers for every model, but it helps the trained model too, so the strict numbers belong next
+  to the others.
 
-What the 10 wrong answers (out of 465) look like:
+### Comparison with Qwen3.8-27B
 
-- **Wrong thresholds.** In a classification task the model picks class limits that do not match the question.
-- **`if` on a whole column.** `set class [ if ... ]` on a table does not work (pitfall 3 in the
-  [reference](language-reference.md#pitfalls)); `if` belongs inside `map` over a list.
-- **A value kept with `as` inside a block** is divided by the wrong thing, or the variable is read where it does not
-  exist.
-- **A second part of a two-part program** that is right in structure but wrong in one detail.
+Gemma 4 12B without training was also asked for Python (the same prompt as Qwen, three attempts, reasoning off).
+Qwen3.8-27B (5-bit GGUF, llama.cpp, temperature 0.6, three attempts) got the same questions with the same table
+descriptions: in Ken with the language reference in the prompt, and in Python with pandas allowed, each with
+reasoning off and on. With reasoning on only the seven hand-written tasks were run, because an answer takes several
+minutes. Tokens are those the model wrote for the answer (reasoning included); the prompt is about 1,800 tokens for
+Ken in every case. The last two columns are measured on the hand-written tasks.
+
+| Model | Language | Reasoning | Hand-written | Generated | Table never seen | Tokens per answer | Tokens per correct answer |
+|---|---|---|---|---|---|---|---|
+| Gemma 4 12B | Ken | off | 1/21 (5%) | 2/237 (1%) | 7/135 (5%) | 135 | 2,834 |
+| Gemma 4 12B | Python | off | 20/21 (95%) | 211/237 (89%) | 104/135 (77%) | 214 | 224 |
+| Gemma 4 12B + adapter | Ken | off | 21/21 (100%) | 234/237 (99%) | 135/135 (100%) | 45 | 45 |
+| Qwen3.8-27B | Ken | off | 7/21 (33%) | 52/237 (22%) | 45/135 (33%) | 85 | 254 |
+| Qwen3.8-27B | Python | off | 21/21 (100%) | 229/237 (97%) | 121/135 (90%) | 114 | 114 |
+| Qwen3.8-27B | Ken | on | 20/21 (95%) | | | 11,578 | 12,157 |
+| Qwen3.8-27B | Python | on | 21/21 (100%) | | | 1,644 | 1,644 |
+
+What this shows:
+
+- **A general 27B model is already very good at these tasks in Python,** with or without reasoning. The fine-tuned
+  12B model writing Ken is as accurate, with answers about 2.5 times shorter than Qwen's Python without reasoning
+  (45 tokens against 114).
+- **Ken is hard for a model that has never seen it.** Qwen reaches 33% on the hand-written tasks without reasoning.
+  With reasoning it reaches 95%, but spends about 11,600 tokens per answer: the language can be learned from the
+  reference, at a high price. Training removes the need: the same accuracy in 45 tokens.
+- **Against Qwen's Python the fine-tuned model's advantage is length (and size), not accuracy.** It matches it.
+- **Against its own untrained self it gains accuracy as well as length.** Gemma 4 12B writing Python gets 95%, 89%
+  and 77%; writing Ken after training it gets 100%, 99% and 100% and needs about 45 tokens per correct answer
+  against 224, five times fewer. Not all of that is Ken: the trained model also learned the conventions of the
+  questions (see the label below), and without the label questions untrained Python gets 92% against 99%.
+
+### Two traps in the scoring
+
+Both came up while comparing languages, and both would have marked Python down for something the question did not
+fix, so the tables avoid them:
+
+- **Ties.** In questions such as "the 3 products with the most items" the correct output is not determined when the
+  third and fourth product have the same number. Ken keeps the order of first appearance, pandas sorts the keys,
+  and a Python program may do either. The generator marks such questions (`ambiguous` in `training/data/*.jsonl`:
+  31 of the 155 generated test questions) and the tables leave them out; `python -m benchmarks.compare --strict`
+  counts them. Qwen in Python gets 82% and 73% on the generated sets with them, 97% and 90% without.
+- **Wording of the output.** Hand-written task 1 said to print the text `Cancelled:` "followed by" a number. Qwen in
+  Python printed both on one line, which is a fair reading, and scored 0/3 even with reasoning. The task now says
+  "on one line and, on the next line, ..." and every run of it was repeated. Some generated questions say "first
+  print the text `Result:`", and the same thing happens there: Qwen in Python gets 98% on the questions without such
+  a label and 75% on those with one (untrained Gemma in Python: 92% and 54%). The generated wording is part of
+  the training data, so I did not change it; the
+  trained model learned the convention and gets 100% on those questions. I looked at a few of the answers; I did not
+  count how many put the label on the same line.
 
 ### A lesson about the data
 

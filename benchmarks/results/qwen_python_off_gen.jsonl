@@ -1,0 +1,285 @@
+{"lang": "py", "think": "off", "set": "gen", "id": "test0", "attempt": 1, "ok": true, "tokens": 191, "reasoning_chars": 0, "sec": 6.8, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test0", "attempt": 2, "ok": true, "tokens": 181, "reasoning_chars": 0, "sec": 6.3, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test0", "attempt": 3, "ok": true, "tokens": 187, "reasoning_chars": 0, "sec": 7.4, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test1", "attempt": 1, "ok": true, "tokens": 80, "reasoning_chars": 0, "sec": 3.4, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test1", "attempt": 2, "ok": true, "tokens": 80, "reasoning_chars": 0, "sec": 3.2, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test1", "attempt": 3, "ok": true, "tokens": 80, "reasoning_chars": 0, "sec": 2.9, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test2", "attempt": 1, "ok": true, "tokens": 101, "reasoning_chars": 0, "sec": 3.9, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test2", "attempt": 2, "ok": true, "tokens": 104, "reasoning_chars": 0, "sec": 3.6, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test2", "attempt": 3, "ok": true, "tokens": 99, "reasoning_chars": 0, "sec": 3.5, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test3", "attempt": 1, "ok": true, "tokens": 139, "reasoning_chars": 0, "sec": 5.1, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test3", "attempt": 2, "ok": true, "tokens": 166, "reasoning_chars": 0, "sec": 5.6, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test3", "attempt": 3, "ok": true, "tokens": 142, "reasoning_chars": 0, "sec": 4.8, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test4", "attempt": 1, "ok": true, "tokens": 161, "reasoning_chars": 0, "sec": 5.9, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test4", "attempt": 2, "ok": true, "tokens": 157, "reasoning_chars": 0, "sec": 5.3, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test4", "attempt": 3, "ok": true, "tokens": 228, "reasoning_chars": 0, "sec": 7.7, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test5", "attempt": 1, "ok": true, "tokens": 111, "reasoning_chars": 0, "sec": 4.1, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test5", "attempt": 2, "ok": true, "tokens": 171, "reasoning_chars": 0, "sec": 5.8, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test5", "attempt": 3, "ok": true, "tokens": 160, "reasoning_chars": 0, "sec": 5.4, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test6", "attempt": 1, "ok": true, "tokens": 166, "reasoning_chars": 0, "sec": 6.0, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test6", "attempt": 2, "ok": true, "tokens": 180, "reasoning_chars": 0, "sec": 6.1, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test6", "attempt": 3, "ok": true, "tokens": 172, "reasoning_chars": 0, "sec": 5.8, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test7", "attempt": 1, "ok": true, "tokens": 186, "reasoning_chars": 0, "sec": 6.8, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test7", "attempt": 2, "ok": true, "tokens": 115, "reasoning_chars": 0, "sec": 3.9, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test7", "attempt": 3, "ok": true, "tokens": 212, "reasoning_chars": 0, "sec": 7.2, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test8", "attempt": 1, "ok": true, "tokens": 217, "reasoning_chars": 0, "sec": 7.7, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test8", "attempt": 2, "ok": true, "tokens": 134, "reasoning_chars": 0, "sec": 4.6, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test8", "attempt": 3, "ok": true, "tokens": 194, "reasoning_chars": 0, "sec": 6.6, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test9", "attempt": 1, "ok": true, "tokens": 132, "reasoning_chars": 0, "sec": 4.8, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test9", "attempt": 2, "ok": true, "tokens": 132, "reasoning_chars": 0, "sec": 4.5, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test9", "attempt": 3, "ok": true, "tokens": 132, "reasoning_chars": 0, "sec": 4.5, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test10", "attempt": 1, "ok": true, "tokens": 111, "reasoning_chars": 0, "sec": 4.3, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test10", "attempt": 2, "ok": true, "tokens": 112, "reasoning_chars": 0, "sec": 3.8, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test10", "attempt": 3, "ok": true, "tokens": 111, "reasoning_chars": 0, "sec": 3.8, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test11", "attempt": 1, "ok": true, "tokens": 82, "reasoning_chars": 0, "sec": 3.2, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test11", "attempt": 2, "ok": true, "tokens": 92, "reasoning_chars": 0, "sec": 3.2, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test11", "attempt": 3, "ok": true, "tokens": 97, "reasoning_chars": 0, "sec": 3.3, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test12", "attempt": 1, "ok": false, "tokens": 212, "reasoning_chars": 0, "sec": 7.5, "finish": "stop", "note": "different output"}
+{"lang": "py", "think": "off", "set": "gen", "id": "test12", "attempt": 2, "ok": false, "tokens": 198, "reasoning_chars": 0, "sec": 6.7, "finish": "stop", "note": "different output"}
+{"lang": "py", "think": "off", "set": "gen", "id": "test12", "attempt": 3, "ok": false, "tokens": 223, "reasoning_chars": 0, "sec": 7.5, "finish": "stop", "note": "different output"}
+{"lang": "py", "think": "off", "set": "gen", "id": "test13", "attempt": 1, "ok": true, "tokens": 148, "reasoning_chars": 0, "sec": 5.4, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test13", "attempt": 2, "ok": true, "tokens": 160, "reasoning_chars": 0, "sec": 5.4, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test13", "attempt": 3, "ok": true, "tokens": 130, "reasoning_chars": 0, "sec": 4.4, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test14", "attempt": 1, "ok": false, "tokens": 136, "reasoning_chars": 0, "sec": 5.1, "finish": "stop", "note": "different output"}
+{"lang": "py", "think": "off", "set": "gen", "id": "test14", "attempt": 2, "ok": false, "tokens": 146, "reasoning_chars": 0, "sec": 4.9, "finish": "stop", "note": "different output"}
+{"lang": "py", "think": "off", "set": "gen", "id": "test14", "attempt": 3, "ok": false, "tokens": 184, "reasoning_chars": 0, "sec": 6.3, "finish": "stop", "note": "different output"}
+{"lang": "py", "think": "off", "set": "gen", "id": "test15", "attempt": 1, "ok": true, "tokens": 163, "reasoning_chars": 0, "sec": 5.9, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test15", "attempt": 2, "ok": true, "tokens": 166, "reasoning_chars": 0, "sec": 5.6, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test15", "attempt": 3, "ok": true, "tokens": 178, "reasoning_chars": 0, "sec": 6.0, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test16", "attempt": 1, "ok": true, "tokens": 75, "reasoning_chars": 0, "sec": 3.0, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test16", "attempt": 2, "ok": true, "tokens": 70, "reasoning_chars": 0, "sec": 2.4, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test16", "attempt": 3, "ok": true, "tokens": 67, "reasoning_chars": 0, "sec": 2.3, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test17", "attempt": 1, "ok": true, "tokens": 147, "reasoning_chars": 0, "sec": 5.3, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test17", "attempt": 2, "ok": true, "tokens": 191, "reasoning_chars": 0, "sec": 6.5, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test17", "attempt": 3, "ok": true, "tokens": 163, "reasoning_chars": 0, "sec": 5.5, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test18", "attempt": 1, "ok": true, "tokens": 82, "reasoning_chars": 0, "sec": 3.2, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test18", "attempt": 2, "ok": true, "tokens": 87, "reasoning_chars": 0, "sec": 3.0, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test18", "attempt": 3, "ok": true, "tokens": 87, "reasoning_chars": 0, "sec": 3.0, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test19", "attempt": 1, "ok": false, "tokens": 208, "reasoning_chars": 0, "sec": 7.4, "finish": "stop", "note": "different output"}
+{"lang": "py", "think": "off", "set": "gen", "id": "test19", "attempt": 2, "ok": false, "tokens": 168, "reasoning_chars": 0, "sec": 5.7, "finish": "stop", "note": "different output"}
+{"lang": "py", "think": "off", "set": "gen", "id": "test19", "attempt": 3, "ok": false, "tokens": 220, "reasoning_chars": 0, "sec": 7.4, "finish": "stop", "note": "different output"}
+{"lang": "py", "think": "off", "set": "gen", "id": "test20", "attempt": 1, "ok": true, "tokens": 195, "reasoning_chars": 0, "sec": 6.9, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test20", "attempt": 2, "ok": true, "tokens": 172, "reasoning_chars": 0, "sec": 5.8, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test20", "attempt": 3, "ok": true, "tokens": 342, "reasoning_chars": 0, "sec": 11.5, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test21", "attempt": 1, "ok": true, "tokens": 146, "reasoning_chars": 0, "sec": 5.4, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test21", "attempt": 2, "ok": true, "tokens": 145, "reasoning_chars": 0, "sec": 4.9, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test21", "attempt": 3, "ok": true, "tokens": 145, "reasoning_chars": 0, "sec": 4.9, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test22", "attempt": 1, "ok": true, "tokens": 100, "reasoning_chars": 0, "sec": 3.8, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test22", "attempt": 2, "ok": true, "tokens": 191, "reasoning_chars": 0, "sec": 6.5, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test22", "attempt": 3, "ok": true, "tokens": 138, "reasoning_chars": 0, "sec": 4.7, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test23", "attempt": 1, "ok": true, "tokens": 101, "reasoning_chars": 0, "sec": 3.8, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test23", "attempt": 2, "ok": true, "tokens": 101, "reasoning_chars": 0, "sec": 3.5, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test23", "attempt": 3, "ok": true, "tokens": 104, "reasoning_chars": 0, "sec": 3.5, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test24", "attempt": 1, "ok": true, "tokens": 302, "reasoning_chars": 0, "sec": 10.5, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test24", "attempt": 2, "ok": true, "tokens": 283, "reasoning_chars": 0, "sec": 9.6, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test24", "attempt": 3, "ok": true, "tokens": 223, "reasoning_chars": 0, "sec": 7.6, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test25", "attempt": 1, "ok": true, "tokens": 42, "reasoning_chars": 0, "sec": 1.9, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test25", "attempt": 2, "ok": true, "tokens": 48, "reasoning_chars": 0, "sec": 1.7, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test25", "attempt": 3, "ok": true, "tokens": 48, "reasoning_chars": 0, "sec": 1.7, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test26", "attempt": 1, "ok": true, "tokens": 119, "reasoning_chars": 0, "sec": 4.4, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test26", "attempt": 2, "ok": true, "tokens": 154, "reasoning_chars": 0, "sec": 5.3, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test26", "attempt": 3, "ok": true, "tokens": 160, "reasoning_chars": 0, "sec": 5.4, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test27", "attempt": 1, "ok": true, "tokens": 29, "reasoning_chars": 0, "sec": 1.4, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test27", "attempt": 2, "ok": true, "tokens": 29, "reasoning_chars": 0, "sec": 1.1, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test27", "attempt": 3, "ok": true, "tokens": 29, "reasoning_chars": 0, "sec": 1.0, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test28", "attempt": 1, "ok": true, "tokens": 204, "reasoning_chars": 0, "sec": 7.2, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test28", "attempt": 2, "ok": true, "tokens": 324, "reasoning_chars": 0, "sec": 10.9, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test28", "attempt": 3, "ok": true, "tokens": 219, "reasoning_chars": 0, "sec": 7.5, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test29", "attempt": 1, "ok": true, "tokens": 138, "reasoning_chars": 0, "sec": 5.1, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test29", "attempt": 2, "ok": true, "tokens": 134, "reasoning_chars": 0, "sec": 4.6, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test29", "attempt": 3, "ok": true, "tokens": 128, "reasoning_chars": 0, "sec": 4.4, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test30", "attempt": 1, "ok": true, "tokens": 180, "reasoning_chars": 0, "sec": 6.4, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test30", "attempt": 2, "ok": true, "tokens": 112, "reasoning_chars": 0, "sec": 3.8, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test30", "attempt": 3, "ok": true, "tokens": 68, "reasoning_chars": 0, "sec": 2.4, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test31", "attempt": 1, "ok": true, "tokens": 48, "reasoning_chars": 0, "sec": 2.0, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test31", "attempt": 2, "ok": true, "tokens": 54, "reasoning_chars": 0, "sec": 1.9, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test31", "attempt": 3, "ok": true, "tokens": 44, "reasoning_chars": 0, "sec": 1.5, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test32", "attempt": 1, "ok": false, "tokens": 295, "reasoning_chars": 0, "sec": 10.2, "finish": "stop", "note": "different output"}
+{"lang": "py", "think": "off", "set": "gen", "id": "test32", "attempt": 2, "ok": false, "tokens": 258, "reasoning_chars": 0, "sec": 8.8, "finish": "stop", "note": "different output"}
+{"lang": "py", "think": "off", "set": "gen", "id": "test32", "attempt": 3, "ok": false, "tokens": 302, "reasoning_chars": 0, "sec": 10.1, "finish": "stop", "note": "different output"}
+{"lang": "py", "think": "off", "set": "gen", "id": "test33", "attempt": 1, "ok": true, "tokens": 82, "reasoning_chars": 0, "sec": 3.2, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test33", "attempt": 2, "ok": true, "tokens": 70, "reasoning_chars": 0, "sec": 2.4, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test33", "attempt": 3, "ok": true, "tokens": 108, "reasoning_chars": 0, "sec": 3.7, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test34", "attempt": 1, "ok": true, "tokens": 97, "reasoning_chars": 0, "sec": 3.7, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test34", "attempt": 2, "ok": true, "tokens": 93, "reasoning_chars": 0, "sec": 3.2, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test34", "attempt": 3, "ok": true, "tokens": 97, "reasoning_chars": 0, "sec": 3.3, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test35", "attempt": 1, "ok": true, "tokens": 43, "reasoning_chars": 0, "sec": 1.8, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test35", "attempt": 2, "ok": true, "tokens": 43, "reasoning_chars": 0, "sec": 1.5, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test35", "attempt": 3, "ok": true, "tokens": 43, "reasoning_chars": 0, "sec": 1.5, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test36", "attempt": 1, "ok": true, "tokens": 80, "reasoning_chars": 0, "sec": 3.1, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test36", "attempt": 2, "ok": true, "tokens": 72, "reasoning_chars": 0, "sec": 2.5, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test36", "attempt": 3, "ok": true, "tokens": 74, "reasoning_chars": 0, "sec": 2.6, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test37", "attempt": 1, "ok": true, "tokens": 107, "reasoning_chars": 0, "sec": 4.0, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test37", "attempt": 2, "ok": true, "tokens": 92, "reasoning_chars": 0, "sec": 3.1, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test37", "attempt": 3, "ok": true, "tokens": 92, "reasoning_chars": 0, "sec": 3.1, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test38", "attempt": 1, "ok": true, "tokens": 259, "reasoning_chars": 0, "sec": 9.0, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test38", "attempt": 2, "ok": true, "tokens": 291, "reasoning_chars": 0, "sec": 9.8, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test38", "attempt": 3, "ok": true, "tokens": 203, "reasoning_chars": 0, "sec": 6.8, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test39", "attempt": 1, "ok": true, "tokens": 35, "reasoning_chars": 0, "sec": 1.6, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test39", "attempt": 2, "ok": true, "tokens": 28, "reasoning_chars": 0, "sec": 1.0, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test39", "attempt": 3, "ok": true, "tokens": 33, "reasoning_chars": 0, "sec": 1.2, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test40", "attempt": 1, "ok": true, "tokens": 62, "reasoning_chars": 0, "sec": 2.4, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test40", "attempt": 2, "ok": true, "tokens": 66, "reasoning_chars": 0, "sec": 2.3, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test40", "attempt": 3, "ok": true, "tokens": 62, "reasoning_chars": 0, "sec": 2.1, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test41", "attempt": 1, "ok": true, "tokens": 116, "reasoning_chars": 0, "sec": 4.3, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test41", "attempt": 2, "ok": true, "tokens": 127, "reasoning_chars": 0, "sec": 4.3, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test41", "attempt": 3, "ok": true, "tokens": 117, "reasoning_chars": 0, "sec": 4.0, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test42", "attempt": 1, "ok": true, "tokens": 52, "reasoning_chars": 0, "sec": 2.2, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test42", "attempt": 2, "ok": true, "tokens": 50, "reasoning_chars": 0, "sec": 1.7, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test42", "attempt": 3, "ok": true, "tokens": 53, "reasoning_chars": 0, "sec": 1.8, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test43", "attempt": 1, "ok": true, "tokens": 53, "reasoning_chars": 0, "sec": 2.2, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test43", "attempt": 2, "ok": true, "tokens": 53, "reasoning_chars": 0, "sec": 1.9, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test43", "attempt": 3, "ok": true, "tokens": 53, "reasoning_chars": 0, "sec": 1.8, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test44", "attempt": 1, "ok": false, "tokens": 58, "reasoning_chars": 0, "sec": 2.4, "finish": "stop", "note": "different output"}
+{"lang": "py", "think": "off", "set": "gen", "id": "test44", "attempt": 2, "ok": false, "tokens": 62, "reasoning_chars": 0, "sec": 2.1, "finish": "stop", "note": "different output"}
+{"lang": "py", "think": "off", "set": "gen", "id": "test44", "attempt": 3, "ok": true, "tokens": 53, "reasoning_chars": 0, "sec": 1.8, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test45", "attempt": 1, "ok": true, "tokens": 204, "reasoning_chars": 0, "sec": 7.2, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test45", "attempt": 2, "ok": true, "tokens": 185, "reasoning_chars": 0, "sec": 6.3, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test45", "attempt": 3, "ok": true, "tokens": 169, "reasoning_chars": 0, "sec": 5.7, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test46", "attempt": 1, "ok": true, "tokens": 114, "reasoning_chars": 0, "sec": 4.2, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test46", "attempt": 2, "ok": true, "tokens": 114, "reasoning_chars": 0, "sec": 3.9, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test46", "attempt": 3, "ok": true, "tokens": 114, "reasoning_chars": 0, "sec": 3.9, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test47", "attempt": 1, "ok": true, "tokens": 124, "reasoning_chars": 0, "sec": 4.5, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test47", "attempt": 2, "ok": true, "tokens": 128, "reasoning_chars": 0, "sec": 4.4, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test47", "attempt": 3, "ok": true, "tokens": 161, "reasoning_chars": 0, "sec": 5.5, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test48", "attempt": 1, "ok": true, "tokens": 55, "reasoning_chars": 0, "sec": 2.3, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test48", "attempt": 2, "ok": true, "tokens": 56, "reasoning_chars": 0, "sec": 2.0, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test48", "attempt": 3, "ok": true, "tokens": 55, "reasoning_chars": 0, "sec": 1.9, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test49", "attempt": 1, "ok": false, "tokens": 204, "reasoning_chars": 0, "sec": 7.3, "finish": "stop", "note": "different output"}
+{"lang": "py", "think": "off", "set": "gen", "id": "test49", "attempt": 2, "ok": false, "tokens": 214, "reasoning_chars": 0, "sec": 7.2, "finish": "stop", "note": "different output"}
+{"lang": "py", "think": "off", "set": "gen", "id": "test49", "attempt": 3, "ok": false, "tokens": 226, "reasoning_chars": 0, "sec": 7.6, "finish": "stop", "note": "different output"}
+{"lang": "py", "think": "off", "set": "gen", "id": "test50", "attempt": 1, "ok": false, "tokens": 58, "reasoning_chars": 0, "sec": 2.3, "finish": "stop", "note": "different output"}
+{"lang": "py", "think": "off", "set": "gen", "id": "test50", "attempt": 2, "ok": false, "tokens": 58, "reasoning_chars": 0, "sec": 2.0, "finish": "stop", "note": "different output"}
+{"lang": "py", "think": "off", "set": "gen", "id": "test50", "attempt": 3, "ok": false, "tokens": 58, "reasoning_chars": 0, "sec": 2.0, "finish": "stop", "note": "different output"}
+{"lang": "py", "think": "off", "set": "gen", "id": "test51", "attempt": 1, "ok": true, "tokens": 72, "reasoning_chars": 0, "sec": 2.8, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test51", "attempt": 2, "ok": true, "tokens": 72, "reasoning_chars": 0, "sec": 2.5, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test51", "attempt": 3, "ok": true, "tokens": 73, "reasoning_chars": 0, "sec": 2.5, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test52", "attempt": 1, "ok": false, "tokens": 176, "reasoning_chars": 0, "sec": 6.3, "finish": "stop", "note": "KeyError: 'customer'"}
+{"lang": "py", "think": "off", "set": "gen", "id": "test52", "attempt": 2, "ok": false, "tokens": 277, "reasoning_chars": 0, "sec": 9.3, "finish": "stop", "note": "KeyError: \"Label(s) ['order_id'] do not exist\""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test52", "attempt": 3, "ok": false, "tokens": 127, "reasoning_chars": 0, "sec": 4.4, "finish": "stop", "note": "different output"}
+{"lang": "py", "think": "off", "set": "gen", "id": "test53", "attempt": 1, "ok": false, "tokens": 146, "reasoning_chars": 0, "sec": 5.3, "finish": "stop", "note": "different output"}
+{"lang": "py", "think": "off", "set": "gen", "id": "test53", "attempt": 2, "ok": false, "tokens": 151, "reasoning_chars": 0, "sec": 5.1, "finish": "stop", "note": "different output"}
+{"lang": "py", "think": "off", "set": "gen", "id": "test53", "attempt": 3, "ok": false, "tokens": 192, "reasoning_chars": 0, "sec": 6.5, "finish": "stop", "note": "different output"}
+{"lang": "py", "think": "off", "set": "gen", "id": "test54", "attempt": 1, "ok": true, "tokens": 52, "reasoning_chars": 0, "sec": 2.2, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test54", "attempt": 2, "ok": true, "tokens": 58, "reasoning_chars": 0, "sec": 2.0, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test54", "attempt": 3, "ok": true, "tokens": 55, "reasoning_chars": 0, "sec": 1.9, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test55", "attempt": 1, "ok": false, "tokens": 144, "reasoning_chars": 0, "sec": 5.2, "finish": "stop", "note": "different output"}
+{"lang": "py", "think": "off", "set": "gen", "id": "test55", "attempt": 2, "ok": false, "tokens": 141, "reasoning_chars": 0, "sec": 4.8, "finish": "stop", "note": "different output"}
+{"lang": "py", "think": "off", "set": "gen", "id": "test55", "attempt": 3, "ok": false, "tokens": 148, "reasoning_chars": 0, "sec": 5.0, "finish": "stop", "note": "different output"}
+{"lang": "py", "think": "off", "set": "gen", "id": "test56", "attempt": 1, "ok": true, "tokens": 124, "reasoning_chars": 0, "sec": 4.6, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test56", "attempt": 2, "ok": true, "tokens": 133, "reasoning_chars": 0, "sec": 4.5, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test56", "attempt": 3, "ok": true, "tokens": 126, "reasoning_chars": 0, "sec": 4.3, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test57", "attempt": 1, "ok": true, "tokens": 144, "reasoning_chars": 0, "sec": 5.2, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test57", "attempt": 2, "ok": true, "tokens": 95, "reasoning_chars": 0, "sec": 3.3, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test57", "attempt": 3, "ok": true, "tokens": 95, "reasoning_chars": 0, "sec": 3.3, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test58", "attempt": 1, "ok": false, "tokens": 204, "reasoning_chars": 0, "sec": 7.3, "finish": "stop", "note": "different output"}
+{"lang": "py", "think": "off", "set": "gen", "id": "test58", "attempt": 2, "ok": false, "tokens": 185, "reasoning_chars": 0, "sec": 6.3, "finish": "stop", "note": "different output"}
+{"lang": "py", "think": "off", "set": "gen", "id": "test58", "attempt": 3, "ok": false, "tokens": 190, "reasoning_chars": 0, "sec": 6.4, "finish": "stop", "note": "different output"}
+{"lang": "py", "think": "off", "set": "gen", "id": "test59", "attempt": 1, "ok": true, "tokens": 242, "reasoning_chars": 0, "sec": 8.5, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test59", "attempt": 2, "ok": true, "tokens": 244, "reasoning_chars": 0, "sec": 8.4, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test59", "attempt": 3, "ok": true, "tokens": 334, "reasoning_chars": 0, "sec": 11.3, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test60", "attempt": 1, "ok": true, "tokens": 184, "reasoning_chars": 0, "sec": 6.6, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test60", "attempt": 2, "ok": true, "tokens": 178, "reasoning_chars": 0, "sec": 6.0, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test60", "attempt": 3, "ok": true, "tokens": 188, "reasoning_chars": 0, "sec": 6.4, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test61", "attempt": 1, "ok": false, "tokens": 229, "reasoning_chars": 0, "sec": 8.4, "finish": "stop", "note": "different output"}
+{"lang": "py", "think": "off", "set": "gen", "id": "test61", "attempt": 2, "ok": false, "tokens": 223, "reasoning_chars": 0, "sec": 8.2, "finish": "stop", "note": "different output"}
+{"lang": "py", "think": "off", "set": "gen", "id": "test61", "attempt": 3, "ok": false, "tokens": 216, "reasoning_chars": 0, "sec": 7.4, "finish": "stop", "note": "different output"}
+{"lang": "py", "think": "off", "set": "gen", "id": "test62", "attempt": 1, "ok": true, "tokens": 115, "reasoning_chars": 0, "sec": 4.3, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test62", "attempt": 2, "ok": true, "tokens": 118, "reasoning_chars": 0, "sec": 4.1, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test62", "attempt": 3, "ok": true, "tokens": 118, "reasoning_chars": 0, "sec": 4.0, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test63", "attempt": 1, "ok": true, "tokens": 295, "reasoning_chars": 0, "sec": 10.3, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test63", "attempt": 2, "ok": true, "tokens": 281, "reasoning_chars": 0, "sec": 9.5, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test63", "attempt": 3, "ok": true, "tokens": 289, "reasoning_chars": 0, "sec": 9.8, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test64", "attempt": 1, "ok": true, "tokens": 154, "reasoning_chars": 0, "sec": 5.6, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test64", "attempt": 2, "ok": true, "tokens": 96, "reasoning_chars": 0, "sec": 3.3, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test64", "attempt": 3, "ok": true, "tokens": 156, "reasoning_chars": 0, "sec": 5.3, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test65", "attempt": 1, "ok": true, "tokens": 116, "reasoning_chars": 0, "sec": 4.3, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test65", "attempt": 2, "ok": true, "tokens": 183, "reasoning_chars": 0, "sec": 6.2, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test65", "attempt": 3, "ok": true, "tokens": 157, "reasoning_chars": 0, "sec": 5.3, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test66", "attempt": 1, "ok": true, "tokens": 63, "reasoning_chars": 0, "sec": 2.5, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test66", "attempt": 2, "ok": true, "tokens": 67, "reasoning_chars": 0, "sec": 2.3, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test66", "attempt": 3, "ok": true, "tokens": 63, "reasoning_chars": 0, "sec": 2.2, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test67", "attempt": 1, "ok": true, "tokens": 61, "reasoning_chars": 0, "sec": 2.5, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test67", "attempt": 2, "ok": true, "tokens": 61, "reasoning_chars": 0, "sec": 2.1, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test67", "attempt": 3, "ok": true, "tokens": 61, "reasoning_chars": 0, "sec": 2.1, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test68", "attempt": 1, "ok": true, "tokens": 170, "reasoning_chars": 0, "sec": 6.1, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test68", "attempt": 2, "ok": true, "tokens": 185, "reasoning_chars": 0, "sec": 6.3, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test68", "attempt": 3, "ok": true, "tokens": 187, "reasoning_chars": 0, "sec": 6.3, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test69", "attempt": 1, "ok": true, "tokens": 99, "reasoning_chars": 0, "sec": 3.7, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test69", "attempt": 2, "ok": true, "tokens": 99, "reasoning_chars": 0, "sec": 3.4, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test69", "attempt": 3, "ok": true, "tokens": 99, "reasoning_chars": 0, "sec": 3.4, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test70", "attempt": 1, "ok": true, "tokens": 266, "reasoning_chars": 0, "sec": 9.4, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test70", "attempt": 2, "ok": true, "tokens": 278, "reasoning_chars": 0, "sec": 9.3, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test70", "attempt": 3, "ok": true, "tokens": 270, "reasoning_chars": 0, "sec": 9.1, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test71", "attempt": 1, "ok": true, "tokens": 144, "reasoning_chars": 0, "sec": 5.3, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test71", "attempt": 2, "ok": true, "tokens": 152, "reasoning_chars": 0, "sec": 5.1, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test71", "attempt": 3, "ok": true, "tokens": 153, "reasoning_chars": 0, "sec": 5.2, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test72", "attempt": 1, "ok": true, "tokens": 195, "reasoning_chars": 0, "sec": 7.0, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test72", "attempt": 2, "ok": true, "tokens": 189, "reasoning_chars": 0, "sec": 6.4, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test72", "attempt": 3, "ok": true, "tokens": 196, "reasoning_chars": 0, "sec": 6.6, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test73", "attempt": 1, "ok": false, "tokens": 255, "reasoning_chars": 0, "sec": 9.0, "finish": "stop", "note": "different output"}
+{"lang": "py", "think": "off", "set": "gen", "id": "test73", "attempt": 2, "ok": false, "tokens": 228, "reasoning_chars": 0, "sec": 7.7, "finish": "stop", "note": "different output"}
+{"lang": "py", "think": "off", "set": "gen", "id": "test73", "attempt": 3, "ok": false, "tokens": 229, "reasoning_chars": 0, "sec": 7.8, "finish": "stop", "note": "different output"}
+{"lang": "py", "think": "off", "set": "gen", "id": "test74", "attempt": 1, "ok": false, "tokens": 209, "reasoning_chars": 0, "sec": 7.4, "finish": "stop", "note": "different output"}
+{"lang": "py", "think": "off", "set": "gen", "id": "test74", "attempt": 2, "ok": false, "tokens": 222, "reasoning_chars": 0, "sec": 7.5, "finish": "stop", "note": "different output"}
+{"lang": "py", "think": "off", "set": "gen", "id": "test74", "attempt": 3, "ok": false, "tokens": 197, "reasoning_chars": 0, "sec": 6.8, "finish": "stop", "note": "different output"}
+{"lang": "py", "think": "off", "set": "gen", "id": "test75", "attempt": 1, "ok": true, "tokens": 53, "reasoning_chars": 0, "sec": 2.3, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test75", "attempt": 2, "ok": true, "tokens": 53, "reasoning_chars": 0, "sec": 1.9, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test75", "attempt": 3, "ok": true, "tokens": 53, "reasoning_chars": 0, "sec": 1.9, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test76", "attempt": 1, "ok": true, "tokens": 242, "reasoning_chars": 0, "sec": 8.6, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test76", "attempt": 2, "ok": true, "tokens": 178, "reasoning_chars": 0, "sec": 6.0, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test76", "attempt": 3, "ok": true, "tokens": 209, "reasoning_chars": 0, "sec": 7.0, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test77", "attempt": 1, "ok": true, "tokens": 185, "reasoning_chars": 0, "sec": 6.6, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test77", "attempt": 2, "ok": true, "tokens": 111, "reasoning_chars": 0, "sec": 3.8, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test77", "attempt": 3, "ok": true, "tokens": 146, "reasoning_chars": 0, "sec": 5.0, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test78", "attempt": 1, "ok": true, "tokens": 43, "reasoning_chars": 0, "sec": 1.9, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test78", "attempt": 2, "ok": true, "tokens": 43, "reasoning_chars": 0, "sec": 1.5, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test78", "attempt": 3, "ok": true, "tokens": 43, "reasoning_chars": 0, "sec": 1.5, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test79", "attempt": 1, "ok": false, "tokens": 361, "reasoning_chars": 0, "sec": 12.4, "finish": "stop", "note": "different output"}
+{"lang": "py", "think": "off", "set": "gen", "id": "test79", "attempt": 2, "ok": false, "tokens": 334, "reasoning_chars": 0, "sec": 11.3, "finish": "stop", "note": "different output"}
+{"lang": "py", "think": "off", "set": "gen", "id": "test79", "attempt": 3, "ok": true, "tokens": 319, "reasoning_chars": 0, "sec": 10.8, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test80", "attempt": 1, "ok": true, "tokens": 201, "reasoning_chars": 0, "sec": 7.1, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test80", "attempt": 2, "ok": true, "tokens": 213, "reasoning_chars": 0, "sec": 7.2, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test80", "attempt": 3, "ok": true, "tokens": 174, "reasoning_chars": 0, "sec": 5.9, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test81", "attempt": 1, "ok": true, "tokens": 68, "reasoning_chars": 0, "sec": 2.7, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test81", "attempt": 2, "ok": true, "tokens": 64, "reasoning_chars": 0, "sec": 2.2, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test81", "attempt": 3, "ok": true, "tokens": 65, "reasoning_chars": 0, "sec": 2.3, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test82", "attempt": 1, "ok": false, "tokens": 129, "reasoning_chars": 0, "sec": 4.7, "finish": "stop", "note": "different output"}
+{"lang": "py", "think": "off", "set": "gen", "id": "test82", "attempt": 2, "ok": false, "tokens": 124, "reasoning_chars": 0, "sec": 4.2, "finish": "stop", "note": "different output"}
+{"lang": "py", "think": "off", "set": "gen", "id": "test82", "attempt": 3, "ok": false, "tokens": 118, "reasoning_chars": 0, "sec": 4.0, "finish": "stop", "note": "different output"}
+{"lang": "py", "think": "off", "set": "gen", "id": "test83", "attempt": 1, "ok": true, "tokens": 135, "reasoning_chars": 0, "sec": 4.9, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test83", "attempt": 2, "ok": true, "tokens": 133, "reasoning_chars": 0, "sec": 4.5, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test83", "attempt": 3, "ok": true, "tokens": 133, "reasoning_chars": 0, "sec": 4.5, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test84", "attempt": 1, "ok": true, "tokens": 175, "reasoning_chars": 0, "sec": 6.3, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test84", "attempt": 2, "ok": true, "tokens": 165, "reasoning_chars": 0, "sec": 5.6, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test84", "attempt": 3, "ok": true, "tokens": 182, "reasoning_chars": 0, "sec": 6.2, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test85", "attempt": 1, "ok": true, "tokens": 232, "reasoning_chars": 0, "sec": 8.2, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test85", "attempt": 2, "ok": true, "tokens": 231, "reasoning_chars": 0, "sec": 7.9, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test85", "attempt": 3, "ok": true, "tokens": 267, "reasoning_chars": 0, "sec": 9.1, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test86", "attempt": 1, "ok": true, "tokens": 180, "reasoning_chars": 0, "sec": 6.5, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test86", "attempt": 2, "ok": true, "tokens": 182, "reasoning_chars": 0, "sec": 6.1, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test86", "attempt": 3, "ok": true, "tokens": 174, "reasoning_chars": 0, "sec": 5.9, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test87", "attempt": 1, "ok": true, "tokens": 296, "reasoning_chars": 0, "sec": 10.3, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test87", "attempt": 2, "ok": true, "tokens": 266, "reasoning_chars": 0, "sec": 9.0, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test87", "attempt": 3, "ok": true, "tokens": 265, "reasoning_chars": 0, "sec": 8.9, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test88", "attempt": 1, "ok": true, "tokens": 61, "reasoning_chars": 0, "sec": 2.5, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test88", "attempt": 2, "ok": true, "tokens": 61, "reasoning_chars": 0, "sec": 2.1, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test88", "attempt": 3, "ok": true, "tokens": 61, "reasoning_chars": 0, "sec": 2.1, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test89", "attempt": 1, "ok": true, "tokens": 56, "reasoning_chars": 0, "sec": 2.3, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test89", "attempt": 2, "ok": true, "tokens": 60, "reasoning_chars": 0, "sec": 2.1, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test89", "attempt": 3, "ok": true, "tokens": 56, "reasoning_chars": 0, "sec": 1.9, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test90", "attempt": 1, "ok": true, "tokens": 182, "reasoning_chars": 0, "sec": 6.5, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test90", "attempt": 2, "ok": true, "tokens": 189, "reasoning_chars": 0, "sec": 6.4, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test90", "attempt": 3, "ok": true, "tokens": 209, "reasoning_chars": 0, "sec": 7.1, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test91", "attempt": 1, "ok": true, "tokens": 279, "reasoning_chars": 0, "sec": 9.7, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test91", "attempt": 2, "ok": true, "tokens": 234, "reasoning_chars": 0, "sec": 8.0, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test91", "attempt": 3, "ok": true, "tokens": 197, "reasoning_chars": 0, "sec": 6.7, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test92", "attempt": 1, "ok": false, "tokens": 369, "reasoning_chars": 0, "sec": 12.8, "finish": "stop", "note": "different output"}
+{"lang": "py", "think": "off", "set": "gen", "id": "test92", "attempt": 2, "ok": false, "tokens": 330, "reasoning_chars": 0, "sec": 11.2, "finish": "stop", "note": "different output"}
+{"lang": "py", "think": "off", "set": "gen", "id": "test92", "attempt": 3, "ok": false, "tokens": 310, "reasoning_chars": 0, "sec": 10.6, "finish": "stop", "note": "different output"}
+{"lang": "py", "think": "off", "set": "gen", "id": "test93", "attempt": 1, "ok": false, "tokens": 212, "reasoning_chars": 0, "sec": 7.6, "finish": "stop", "note": "different output"}
+{"lang": "py", "think": "off", "set": "gen", "id": "test93", "attempt": 2, "ok": false, "tokens": 213, "reasoning_chars": 0, "sec": 7.2, "finish": "stop", "note": "different output"}
+{"lang": "py", "think": "off", "set": "gen", "id": "test93", "attempt": 3, "ok": false, "tokens": 225, "reasoning_chars": 0, "sec": 7.6, "finish": "stop", "note": "different output"}
+{"lang": "py", "think": "off", "set": "gen", "id": "test94", "attempt": 1, "ok": true, "tokens": 200, "reasoning_chars": 0, "sec": 7.1, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test94", "attempt": 2, "ok": true, "tokens": 195, "reasoning_chars": 0, "sec": 6.6, "finish": "stop", "note": ""}
+{"lang": "py", "think": "off", "set": "gen", "id": "test94", "attempt": 3, "ok": true, "tokens": 183, "reasoning_chars": 0, "sec": 6.2, "finish": "stop", "note": ""}

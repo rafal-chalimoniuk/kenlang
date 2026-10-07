@@ -62,15 +62,18 @@ def qwen_rows(folder, language, reasoning):
     return rows
 
 
-def comparison(base, ft, qwen_folder):
+def comparison(base, ft, qwen_folder, base_python=None):
     """The table that puts the adapter next to Qwen (if its results exist), and two sentences computed from it."""
     adapter_label = f"{GEMMA} + this adapter"
     runs = [(GEMMA, "Ken", "off", base), (adapter_label, "Ken", "off", ft)]
+    if base_python:                         # the same model without any training, asked for Python
+        runs.insert(1, (GEMMA, "Python", "off", base_python))
     for language, reasoning in (("Ken", "on"), ("Python", "on"), ("Ken", "off"), ("Python", "off")):
         rows = qwen_rows(qwen_folder, language, reasoning)
         if rows:
             runs.append((QWEN, language, reasoning, rows))
-    stats = {(model, language, reasoning): compare.summarize(rows) for model, language, reasoning, rows in runs}
+    stats = {(model, language, reasoning): compare.summarize(compare.fair(rows))
+             for model, language, reasoning, rows in runs}
     adapter, notes = stats[(adapter_label, "Ken", "off")], []
     ken_on, ken_off, py_off = (stats.get((QWEN, "Ken", "on")), stats.get((QWEN, "Ken", "off")),
                                stats.get((QWEN, "Python", "off")))
@@ -82,10 +85,38 @@ def comparison(base, ft, qwen_folder):
         notes.append(f"- With reasoning off, {QWEN} writes {ken_off['mean_tokens']:,.0f} tokens per answer in Ken and "
                      f"{py_off['mean_tokens']:,.0f} in Python, and gets {ken_off['bench']} right in Ken against "
                      f"{py_off['bench']} in Python on the hand-written tasks.")
+    if py_off and py_off["per_correct"] and adapter["per_correct"]:
+        py_on = stats.get((QWEN, "Python", "on"))
+        with_reasoning = f" ({py_on['per_correct']:,.0f} with reasoning on)" if py_on and py_on["per_correct"] else ""
+        notes.append(f"- In Python, {QWEN} needs about {py_off['per_correct']:,.0f} tokens per correct answer with "
+                     f"reasoning off{with_reasoning}. This adapter needs about {adapter['per_correct']:,.0f} for Ken, "
+                     f"which is {py_off['per_correct'] / adapter['per_correct']:.1f} times shorter than the Python "
+                     "answer.")
+    gemma_py = stats.get((GEMMA, "Python", "off"))
+    if gemma_py and gemma_py["per_correct"] and adapter["per_correct"]:
+        notes.append(
+            f"- Without any training, {GEMMA} writing Python gets {gemma_py['bench']} on the hand-written tasks, "
+            f"{gemma_py['gen']} on the generated ones and {gemma_py['unseen']} on the table it never saw, and needs "
+            f"about {gemma_py['per_correct']:,.0f} tokens per correct answer. The adapter writing Ken gets "
+            f"{adapter['bench']}, {adapter['gen']} and {adapter['unseen']} with about {adapter['per_correct']:,.0f}, "
+            f"which is {gemma_py['per_correct'] / adapter['per_correct']:.1f} times shorter.")
+    python_rows = next((rows for model, language, reasoning, rows in runs
+                        if (model, language, reasoning) == (QWEN, "Python", "off")), None)
+    if python_rows:
+        py_plain, py_label = compare.label_split(python_rows)
+        ad_plain, ad_label = compare.label_split(ft)
+        gp_plain, gp_label = compare.label_split(base_python) if base_python else ("", "")
+        if py_plain and py_label and ad_plain and ad_label:
+            notes.append(
+                "- Some generated questions ask to print a label first (\"first print the text ...\"). In "
+                f"Python, {QWEN} gets {py_plain} on the questions without a label and {py_label} on those with one; "
+                "in the cases I looked at it printed the label and the value on one line, where the questions expect "
+                f"two. The adapter was trained on that convention and gets {ad_plain} and {ad_label}."
+                + (f" Untrained {GEMMA} in Python gets {gp_plain} and {gp_label}." if gp_plain and gp_label else ""))
     table = compare.table(runs)
     prompt_note = ("- The prompt is about 1,800 tokens in every Ken run: the language reference is about 1,500 of "
                    "them. The comparison is about the answer, which is the slow and costly part.")
-    if len(runs) == 2:                      # no Qwen results: say only what the table shows
+    if not any(run[0] == QWEN for run in runs):      # no Qwen results: say only what the table shows
         return ("Every token a model writes costs time and money. The table shows the mean answer length and the "
                 "tokens spent per correct answer, both measured on the hand-written tasks.\n\n"
                 f"{table}\n\n{prompt_note}")
@@ -114,6 +145,25 @@ def length_section(path):
             "This compares correct programs, not what models write. I wrote the Python and pandas versions myself, "
             "so read the ratios as an estimate. The seven tasks are tasks on tables, so the ratios say nothing "
             "about other kinds of programs.\n")
+
+
+def left_out(all_rows, kept, n_attempts):
+    """The sentence that says how many questions are not counted because their correct output depends on ties."""
+    parts = []
+    for key, what in (("gen", "generated questions"), ("unseen", "questions about the unseen table")):
+        total = sum(r["set"] == key for r in all_rows) // n_attempts
+        left = total - sum(r["set"] == key for r in kept) // n_attempts
+        if left:
+            parts.append(f"{left} of the {total} {what}")
+    if not parts:
+        return ""
+    return (" and ".join(parts) + " are not counted in the numbers on this card: the correct output of such a "
+            "question depends on how ties between equal values are broken (for example the 3 products with the most "
+            "items, when the third and fourth have the same number), and the question does not say. "
+            "The complete results are in `evaluation/`. Counting them, the adapter gets "
+            f"{share([r for r in all_rows if r['set'] == 'gen'])} on the generated questions and "
+            f"{share([r for r in all_rows if r['set'] == 'unseen'])} on the unseen table; some of its wrong answers "
+            "there are real mistakes, not tie-breaking.")
 
 
 def prepare_output(dist):
@@ -160,7 +210,8 @@ def main():
     adapter = pathlib.Path(a.adapter or results / "adapter")
     dist = pathlib.Path(a.out) if a.out else DEFAULT_OUT / a.repo_id.split("/")[-1]
     check_adapter(adapter)
-    base, ft = load_rows(results, "base"), load_rows(results, "finetuned")
+    all_base, all_ft = load_rows(results, "base"), load_rows(results, "finetuned")
+    base, ft = compare.fair(all_base), compare.fair(all_ft)       # the rows the numbers on the card are made of
     cfg = json.loads((results / "train_config.json").read_text(encoding="utf-8"))
     log = json.loads((results / "train_log.json").read_text(encoding="utf-8"))
     losses = [e["loss"] for e in log if "loss" in e]
@@ -178,7 +229,9 @@ def main():
     n_attempts = len(subset(ft, "bench")) // 7
     mean = lambda rows: f"{sum(r['tokens'] for r in rows) / len(rows):.0f}"  # noqa: E731
     steps = max((e.get("step", 0) for e in log), default=0)
-    section = comparison(base, ft, a.qwen_results)
+    python_file = results / "eval_base_python.jsonl"
+    base_python = compare.fair(load_rows(results, "base_python")) if python_file.exists() else None
+    section = comparison(base, ft, a.qwen_results, base_python)
 
     values = {
         "MODEL_NAME": a.repo_id.split("/")[-1], "REPO_ID": a.repo_id,
@@ -186,6 +239,7 @@ def main():
         "REPO_BANNER": source_banner(a.repo_url),
         "ATTEMPTS": n_attempts, "GEN_TASKS": len(subset(ft, "gen")) // n_attempts,
         "UNSEEN_TASKS": len(subset(ft, "unseen")) // n_attempts,
+        "LEFT_OUT": left_out(all_ft, ft, n_attempts),
         "BASE_BENCH": share(subset(base, "bench")), "FT_BENCH": share(subset(ft, "bench")),
         "BASE_GEN": share(subset(base, "gen")), "FT_GEN": share(subset(ft, "gen")),
         "BASE_UNSEEN": share(subset(base, "unseen")), "FT_UNSEEN": share(subset(ft, "unseen")),
@@ -210,6 +264,8 @@ def main():
     (dist / "evaluation").mkdir()
     for tag in ("base", "finetuned"):
         shutil.copy(results / f"eval_{tag}.jsonl", dist / "evaluation" / f"{tag}.jsonl")
+    if python_file.exists():
+        shutil.copy(python_file, dist / "evaluation" / "base_python.jsonl")
     for path in sorted(pathlib.Path(a.qwen_results).glob("qwen_*.jsonl")):
         shutil.copy(path, dist / "evaluation" / path.name)
     total = sum(f.stat().st_size for f in dist.rglob("*") if f.is_file())
